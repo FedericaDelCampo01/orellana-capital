@@ -8,13 +8,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        sans: ['Euclid Circular B, sans-serif'],
+      },
+      colors: {
+        transparent: 'transparent',
+        'dark-blue': '#0D1223',
+        'blue': '#0850C0',
+        'light-blue': '#7EE7E1',
+        'lime-green': '#7CED4F',
+        'white': '#EDEDED',
+        'grey': '#525661'
       },
     },
   },
   plugins: [],
 };
+
 export default config;
