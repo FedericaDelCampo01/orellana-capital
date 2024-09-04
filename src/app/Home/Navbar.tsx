@@ -45,12 +45,11 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('contact')} className="text-white hover:text-light-blue duration-300">Contact</button>
             </div>
           </div>
-          <button className="hidden md:block text-sm px-8 py-3 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium">
+          <button className="hidden md:block text-sm px-8 py-3 custom-gradient text-dark-blue rounded-full font-medium">
             <Link 
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-dark-blue duration-300"
             >
               Let's Talk
             </Link>

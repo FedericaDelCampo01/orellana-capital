@@ -3,9 +3,9 @@ import logoImage from "../../../public/images/logo.svg";
 
 const Footer = () => {
   return (
-    <section className="bg-dark-blue font-sans overflow-hidden w-full px-4 md:pt-24 md:pt-32 pb-8">
+    <section className="bg-dark-blue font-sans overflow-hidden w-full px-4 md:pt-24 pb-8">
       <div className="container mx-auto md:max-w-5xl bg-white/[.14] rounded-xl md:rounded-3xl md:mb-16">
-        <div className="flex flex-wrap md:flex-nowrap justify-between p-8 md:p-12">
+        <div className="flex flex-wrap md:flex-nowrap justify-between p-8 md:p-12 md:pb-8">
           <div className="w-full md:w-1/4 mb-8 md:mb-0 -ml-4 md:-ml-0">
             <Image
               src={logoImage}
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="container mx-auto px-8 md:px-12 pb-8">
-          <hr className="border-t border-white/50 my-8" />
+          <hr className="border-t border-white/50 mb-8" />
           <p className="text-white/70 text-sm font-extralight text-left">
             © Copyright 2024 Coddit. All Rights Reserved
           </p>

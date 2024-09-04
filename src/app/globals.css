@@ -83,5 +83,12 @@
 }
 
 .custom-gradient {
+  /* @apply bg-gradient-to-r from-sky-400 via-cyan-300 to-green-300; */
+  @apply bg-gradient-to-r from-sky-400 via-[#25D3ED,#85EFAC,#85EFAC,#25D3ED] to-sky-400;
+  @apply transition-all duration-500  bg-size-200 bg-pos-0 hover:bg-pos-100 hover:text-white;
+}
+
+.custom-banner-gradient {
   @apply bg-gradient-to-r from-sky-400 via-cyan-300 to-green-300;
+  
 }
