@@ -29,10 +29,9 @@ const AboutUs = () => {
             height={570}
           />
           <div 
-            className="absolute top-0 left-0 w-full h-full"
+            className={`hidden md:block absolute top-0 left-0 w-full h-full duration-100 ease-out transform transition-transform`}
             style={{
-              transform: `translate(${190 + scrollY * 0.1}px, ${scrollY * 0.1}px)`,
-              transition: 'transform 0.1s ease-out'
+              transform: `translate(${190 + scrollY * 0.1}px, ${scrollY * 0.1}px)`
             }}
           >
             <Image
@@ -42,6 +41,7 @@ const AboutUs = () => {
               height={250}
             />
           </div>
+          
         </div>
         <div className="px-4 md:px-0 md:w-1/2 md:pl-8 md:ml-16">
           <h2 className="text-lg font-bold uppercase mb-4 text-light-blue">About Us</h2>
