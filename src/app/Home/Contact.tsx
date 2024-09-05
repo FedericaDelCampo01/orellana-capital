@@ -52,7 +52,7 @@ const Contact = () => {
           />
         </div>
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-6 md:p-12 lg:mr-[15%]">
-          <h1 className="text-white text-3xl font-medium mb-16">Let's work together!</h1>
+          <h1 className="text-white text-3xl font-medium mb-16">Let&apos;s work together!</h1>
 
           <form className="w-full" onSubmit={handleSubmit}>
             <div className="flex flex-wrap -mx-3 mb-6">

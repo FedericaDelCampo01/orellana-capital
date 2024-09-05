@@ -51,7 +51,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
             >
-              Let's Talk
+              Let&apos;s Talk
             </Link>
           </button>
 

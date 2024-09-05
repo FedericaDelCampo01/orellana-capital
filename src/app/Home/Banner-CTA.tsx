@@ -21,7 +21,7 @@ const BannerCTA = () => {
               rel="noopener noreferrer" 
               className="inline-block text-base px-8 py-4 bg-dark-blue hover:bg-white text-white hover:text-dark-blue border-2 border-dark-blue duration-300 rounded-full font-medium"
             >
-              Let's discuss your project
+              Let&apos;s discuss your project
             </Link>
           </button>
 

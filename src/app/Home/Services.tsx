@@ -80,8 +80,8 @@ const Services = () => {
           </div>
           <div className="md:hidden w-[435px] h-[480px] relative top-5 right-[55px]">
             <Image
-              src={services[1].image}
-              alt={`${services[1].title} illustration`}
+              src={services[0].image}
+              alt={`${services[0].title} illustration`}
               layout="fill"
               objectFit="cover"
             />

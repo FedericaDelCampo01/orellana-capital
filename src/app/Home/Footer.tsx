@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import logoImage from "../../../public/images/logo.svg";
+import greenGeeksBanner from "../../../public/images/greengeeks-banner.png";
 
 const Footer = () => {
 
@@ -66,12 +67,13 @@ const Footer = () => {
                 href="https://greengeeks.com/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex justify-end"
+                className="flex md:justify-end"
               >
-                <img
-                  src="https://static.greengeeks.com/ggseal/Green_22.png" 
+                <Image
+                  src={greenGeeksBanner}
                   alt="GreenGeeks Seal" 
-                  className="w-24 h-24 "
+                  width={96}
+                  height={96}
                 />
               </a>
             </div>
