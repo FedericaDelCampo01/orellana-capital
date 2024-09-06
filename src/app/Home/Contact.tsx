@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import Image from 'next/image';
 import contact from '../../../public/images/contact.png';
 
@@ -21,8 +21,9 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
     const newErrors: { [key: string]: string } = {};
     if (!formData.name) newErrors.name = 'Name is required';
     if (!formData.email) newErrors.email = 'Email is required';
@@ -34,20 +35,39 @@ const Contact = () => {
       return;
     }
 
-    // Here you would typically send the form data to your backend
-    console.log(formData);
-    setSuccessMessage('Message sent successfully!');
-    setFormData({ name: '', email: '', phone: '', type: '', message: '' });
-    setErrors({});
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+  
+      console.log(formData);
+      setSuccessMessage('Message sent successfully!');
+      setFormData({ name: '', email: '', phone: '', type: '', message: '' });
+      setErrors({});
+    } catch (error) {
+      console.error('Error:', error);
+      alert(`Error: ${error instanceof Error ? error.message : 'Unknown error occurred'}`);
+    }
   };
+
 
   return (
     <section id='contact' className="bg-dark-blue font-sans overflow-hidden w-full">
       <div className="flex md:flex-row flex-col items-center justify-center">
         <div className="lg:w-1/2 hidden md:block">
-          <Image 
-            src={contact} 
-            alt="Contact" 
+          <Image
+            src={contact}
+            alt="Contact"
             className="relative w-full h-auto"
           />
         </div>
@@ -140,9 +160,9 @@ const Contact = () => {
           </form>
         </div>
         <div className="block md:hidden w-full my-20">
-          <Image 
-            src={contact} 
-            alt="Contact" 
+          <Image
+            src={contact}
+            alt="Contact"
             className="relative w-full h-auto"
           />
         </div>

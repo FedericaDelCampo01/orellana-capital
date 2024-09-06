@@ -31,7 +31,7 @@ const AboutUs = () => {
           <div
             className="hidden md:block absolute top-0 left-0 w-full h-full"
             style={{
-              transform: `translate(${190 + scrollY * 0.05}px, ${scrollY * 0.05}px)`,
+              transform: `translate(${190 + scrollY * 0.08}px, ${scrollY * 0.08}px)`,
               transition: 'transform 0.1s ease-out'
             }}
           >
@@ -50,9 +50,9 @@ const AboutUs = () => {
             <h3 className="text-3xl md:text-4xl font-medium text-white md:leading-[48px] mb-7">Where technology and sustainability meet</h3>
             <p className="text-white font-light leading-[29px] text-base">
               At Coddit, we’re on a mission to accelerate the transition to a sustainable economy.
-              We partner with startups and enterprises to create cutting-edge,
-              custom software solutions that not only address today’s challenges but also pave the way
-              for a more efficient, greener, and sustainable tomorrow.
+              We partner with startups and enterprises to build eco-friendly,
+              custom software solutions that address the challenges of today while creating
+              a more efficient and sustainable tomorrow.
             </p>
           </div>
           <button className="mt-6 px-8 py-3 bg-transparent border border-white/40 rounded-full text-white hover:bg-white/10 transition duration-200 text-sm font-medium">
