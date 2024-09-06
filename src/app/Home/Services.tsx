@@ -78,15 +78,6 @@ const Services = () => {
               ))}
             </div>
           </div>
-          <div className="md:hidden w-[435px] h-[480px] relative top-5 right-[55px]">
-            <Image
-              src={services[0].image}
-              alt={`${services[0].title} illustration`}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-
           <div className="hidden md:block md:w-5/12 relative">
             <div
               className={`absolute transition-opacity duration-200 ease-in-out ${isImageVisible ? 'opacity-100' : 'opacity-0'

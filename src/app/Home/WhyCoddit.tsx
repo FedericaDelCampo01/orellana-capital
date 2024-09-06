@@ -4,15 +4,15 @@ import whyCodditMobile from '../../../public/images/whyCoddit-mobile.png'
 const reasons = [
   {
     title: "Partner Focus",
-    description: "We offer personalised services tailored to our partner’s specific needs in order to achieve impactful results."
+    description: "We offer personalised services tailored to your specific needs in order to achieve impactful results."
   },
   {
-    title: "Innovation and Adaptability",
-    description: "Innovation is a constant in our work, allowing us to stay at the forefront of the industry."
+    title: "Radical Transparency",
+    description: "We guarantee full transparency of our processes and results, so you can always see the impact of our work."
   },
   {
     title: "Experience and Expertise",
-    description: "With over 10 years of industry experience, our team is ready to drive your project to success."
+    description: "With over 10 years of industry experience, we are experts in the field and will drive your project to success."
   }
 ]
 
@@ -23,7 +23,7 @@ const WhyCoddit = () => {
         <div className="flex md:flex-row flex-col w-full gap-12 p-6 md:p-12 mb-[-80px] md:mb-[-100px]">
           <div className="w-full md:w-1/4">
             <h1 className="text-white text-2xl font-medium mb-4">Why Coddit</h1>
-            <p className="text-white text-base font-light mb-8">We’re more than just a software studio. We’re your partner in building a sustainable future. Here’s why our partners choose us:</p>
+            <p className="text-white text-base font-light mb-0 md:mb-8"> More than just a software studio, we are your partner in building a sustainable future. Here’s why our partners choose us:</p>
           </div>
           <div className="w-full md:w-3/4 flex md:flex-row flex-col gap-4">
             {reasons.map((reason, index) => (

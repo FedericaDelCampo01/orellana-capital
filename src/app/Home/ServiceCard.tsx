@@ -12,7 +12,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, isSelecte
     <button onClick={onSelect} className="w-full group">
       <div 
         className={`bg-white rounded-xl p-4 md:px-6 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left 
-        ${isSelected ? 'h-[240px] md:h-[200px]' : 'h-[60px]'}`}
+        ${isSelected ? 'h-[220px] md:h-[180px]' : 'h-[60px]'}`}
       >
         <h3 className={`text-base sm:text-lg md:text-xl font-medium ${isSelected ? 'text-dark-blue mb-4' : 'text-dark-blue/50 mb-0'} transition-all duration-300 group-hover:text-dark-blue`}>
           {title}
