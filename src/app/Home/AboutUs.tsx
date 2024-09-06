@@ -44,7 +44,7 @@ const AboutUs = () => {
           </div>
 
         </div>
-        <div className="px-4 md:px-0 md:w-1/2 md:pl-8 md:ml-16">
+        <div className="px-4 md:px-0 md:w-1/2 md:pl-8 md:ml-16 relative z-10">
           <h2 className="text-lg font-bold uppercase mb-4 text-light-blue">About Us</h2>
           <div>
             <h3 className="text-3xl md:text-4xl font-medium text-white md:leading-[48px] mb-7">Where technology and sustainability meet</h3>
@@ -60,7 +60,7 @@ const AboutUs = () => {
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-light-blue duration-300"
+              className="text-white"
             >
               Learn more about our approach
             </Link>
