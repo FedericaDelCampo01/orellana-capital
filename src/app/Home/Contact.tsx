@@ -149,7 +149,7 @@ const Contact = () => {
               </div>
             </div>
             {successMessage && (
-              <div className="bg-lime-green text-dark-blue p-2 rounded mb-4">{successMessage}</div>
+              <div className="bg-lime-green text-dark-blue p-2 pl-4 rounded-lg text-center mb-4">{successMessage}</div>
             )}
             <button
               className="w-full py-4 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium"

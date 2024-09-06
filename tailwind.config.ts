@@ -16,7 +16,7 @@ const config: Config = {
         'dark-blue': '#0D1223',
         'blue': '#0850C0',
         'light-blue': '#7EE7E1',
-        'lime-green': '#7CED4F',
+        'lime-green': '#99EE94',
         'white': '#EDEDED',
         'grey': '#525661'
       },
