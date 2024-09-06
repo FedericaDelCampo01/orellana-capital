@@ -2,10 +2,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import * as postmark from 'postmark';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log('Request Body:', req.body);
-  console.log('Postmark API Token:', process.env.REACT_APP_POSTMARK_API_TOKEN);
-  console.log('Sender Email:', process.env.REACT_APP_SENDER_EMAIL);
-
   // Initialize the Postmark client with your server token
   const client = new postmark.ServerClient(process.env.REACT_APP_POSTMARK_API_TOKEN as string);
   const senderEmail = process.env.REACT_APP_SENDER_EMAIL as string;
