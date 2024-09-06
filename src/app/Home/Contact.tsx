@@ -50,7 +50,7 @@ const Contact = () => {
   
       const data = await response.json();
   
-      console.log(formData);
+      console.log(data);
       setSuccessMessage('Message sent successfully!');
       setFormData({ name: '', email: '', phone: '', type: '', message: '' });
       setErrors({});
