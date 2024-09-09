@@ -57,7 +57,7 @@ const AboutUs = () => {
           <div>
             <h3 className="text-3xl md:text-4xl font-medium text-white md:leading-[48px] mb-7">Where technology and sustainability meet</h3>
             <p className="text-white font-light leading-[29px] text-base">
-              At Coddit, we're on a mission to accelerate the transition to a sustainable economy.
+              At Coddit, we&apos;re on a mission to accelerate the transition to a sustainable economy.
               We partner with startups and enterprises to build eco-friendly,
               custom software solutions that address the challenges of today while creating
               a more efficient and sustainable tomorrow.

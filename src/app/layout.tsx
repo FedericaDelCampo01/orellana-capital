@@ -135,12 +135,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleAnalytics />
+      <Script
+        id="jsonLd"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Head>
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="/logo192.png" />
