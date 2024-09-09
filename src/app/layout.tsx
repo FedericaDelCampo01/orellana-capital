@@ -70,8 +70,8 @@ const jsonLd = {
   "@type": "Organization",
   "name": "Coddit",
   "url": "https://www.coddit.com",
-  "logo": "https://www.coddit.com/logo.png",
-  "description": "Coddit specializes in custom software development, analysis & discovery, and staff augmentation, focusing on sustainable and eco-friendly solutions.",
+  "logo": "https://www.coddit.com/images/logo.svg",
+  "description": "Coddit specializes in custom software development, analysis & discovery, and staff augmentation, designing and building sustainable and eco-friendly solutions.",
   "sameAs": [
     "https://www.linkedin.com/company/coddit-io",
     "https://github.com/coddit-io"
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     siteName: "Coddit",
     images: [
       {
-        url: "https://www.coddit.com/og-image.jpg",
+        url: "https://www.coddit.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Coddit - Sustainable Software Development",
@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coddit | Sustainable Software Development",
     description: "Accelerating the transition to a sustainable economy through innovative software solutions.",
-    images: ["https://www.coddit.com/twitter-image.jpg"],
+    images: ["https://www.coddit.com/images/twitter-image.png"],
   },
   robots: {
     index: true,
