@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Image from 'next/image';
 import logoImage from '../../../public/images/logo.svg';
-
+import { trackEvent } from '../Utility/AnalyticsHelpers';
 const Navbar = () => {
   const [isClicked, setIsClicked] = React.useState(false);
 
@@ -17,6 +17,13 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleLetsTalkClick = () => {
+    trackEvent('button_click', {
+      button_name: 'Let\'s Talk Navbar',
+      section: 'Navbar'
+    });
   };
 
   return (
@@ -45,7 +52,10 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('contact')} className="text-white hover:text-light-blue duration-300">Contact</button>
             </div>
           </div>
-          <button className="hidden md:block text-base px-8 py-3 custom-gradient text-dark-blue rounded-full font-medium">
+          <button 
+            className="hidden md:block text-base px-8 py-3 custom-gradient text-dark-blue rounded-full font-medium"
+            onClick={handleLetsTalkClick}
+          >
             <Link 
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9" 
               target="_blank" 

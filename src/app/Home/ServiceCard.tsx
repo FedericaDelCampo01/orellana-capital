@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { trackEvent } from '../Utility/AnalyticsHelpers';
 
 interface ServiceCardProps {
   title: string;
@@ -7,9 +8,16 @@ interface ServiceCardProps {
   onSelect: () => void;
 }
 
+const handleServiceCardClick = (title: string) => {
+  trackEvent('button_click', {
+    button_name: `Service Card ${title}`,
+    section: 'Services'
+  });
+};
+
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, isSelected, onSelect }) => {
   return (
-    <button onClick={onSelect} className="w-full group">
+    <button onClick={() => handleServiceCardClick(title)} className="w-full group">
       <div 
         className={` rounded-xl p-4 md:px-6 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left 
         ${isSelected ? 'h-[220px] md:h-[180px] bg-white' : 'h-[60px] bg-dark-blue'}`}

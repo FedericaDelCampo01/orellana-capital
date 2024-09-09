@@ -1,10 +1,11 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../Utility/OptimizedImage';
 import world from '../../../public/images/about-us.svg';
 import satelite from '../../../public/images/satelite.svg';
 import Link from 'next/link';
+import { trackEvent } from '../Utility/AnalyticsHelpers';
 
 const AboutUs = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -14,6 +15,13 @@ const AboutUs = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleLearnMoreClick = () => {
+    trackEvent('button_click', {
+      button_name: 'Learn more about our approach',
+      section: 'About Us'
+    });
+  };
 
   return (
     <section id='about-us' className="bg-dark-blue overflow-hidden">
@@ -49,13 +57,16 @@ const AboutUs = () => {
           <div>
             <h3 className="text-3xl md:text-4xl font-medium text-white md:leading-[48px] mb-7">Where technology and sustainability meet</h3>
             <p className="text-white font-light leading-[29px] text-base">
-              At Coddit, we’re on a mission to accelerate the transition to a sustainable economy.
+              At Coddit, we're on a mission to accelerate the transition to a sustainable economy.
               We partner with startups and enterprises to build eco-friendly,
               custom software solutions that address the challenges of today while creating
               a more efficient and sustainable tomorrow.
             </p>
           </div>
-          <button className="mt-6 px-8 py-3 bg-transparent border border-white/40 rounded-full text-white hover:bg-white/10 transition duration-200 text-base font-medium">
+          <button 
+            className="mt-6 px-8 py-3 bg-transparent border border-white/40 rounded-full text-white hover:bg-white/10 transition duration-200 text-base font-medium"
+            onClick={handleLearnMoreClick}
+          >
             <Link
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9"
               target="_blank"

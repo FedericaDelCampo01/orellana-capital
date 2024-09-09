@@ -1,6 +1,6 @@
 "use client"
 
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../Utility/OptimizedImage';
 import ServiceCard from './ServiceCard';
 import { useState } from 'react';
 

@@ -1,4 +1,4 @@
-import OptimizedImage from './OptimizedImage'
+import OptimizedImage from '../Utility/OptimizedImage'
 import whyCoddit from '../../../public/images/whyCoddit.png'
 import whyCodditMobile from '../../../public/images/whyCoddit-mobile.png'
 const reasons = [

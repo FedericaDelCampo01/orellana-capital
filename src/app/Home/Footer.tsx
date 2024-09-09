@@ -1,6 +1,6 @@
 'use client'
 
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../Utility/OptimizedImage';
 import logoImage from "../../../public/images/logo.svg";
 import greenGeeksBanner from "../../../public/images/greengeeks-banner.png";
 
@@ -15,7 +15,7 @@ const Footer = () => {
               src={logoImage.src}
               alt="Logo"
               width={150}
-              height={100}
+              height={47}
               className=" -ml-4 -mt-1"
             />
             <div className="flex space-x-4 mt-6">

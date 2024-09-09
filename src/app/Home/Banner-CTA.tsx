@@ -1,8 +1,14 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { trackEvent } from '../Utility/AnalyticsHelpers';
 
+const handleBannerCTAClick = () => {
+  trackEvent('button_click', {
+    button_name: 'Banner CTA',
+    section: 'Banner CTA'
+  });
+};
 
 const BannerCTA = () => {
   return (
@@ -14,7 +20,7 @@ const BannerCTA = () => {
             <h2 className="text-lg md:text-2xl font-medium text-dark-blue">Schedule a FREE 30-min consultation call</h2>
 
           </div>
-          <button className="text-center md:text-right">
+          <button onClick={handleBannerCTAClick} className="text-center md:text-right">
             <Link 
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9" 
               target="_blank" 

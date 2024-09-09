@@ -1,8 +1,9 @@
-"use client"
+'use client'
 
 import { FormEvent, useState } from 'react';
-import OptimizedImage from './OptimizedImage';
+import OptimizedImage from '../Utility/OptimizedImage';
 import contact from '../../../public/images/contact.png';
+import { trackEvent } from '../Utility/AnalyticsHelpers';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,6 +61,12 @@ const Contact = () => {
     }
   };
 
+  const handleContactClick = () => {
+    trackEvent('button_click', {
+      button_name: 'Contact Form Sent',
+      section: 'Contact'
+    });
+  };
 
   return (
     <section id='contact' className="bg-dark-blue overflow-hidden w-full">
@@ -156,6 +163,7 @@ const Contact = () => {
             <button
               className="w-full py-4 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium"
               type="submit"
+              onClick={handleContactClick}
             >
               Send message!
             </button>
