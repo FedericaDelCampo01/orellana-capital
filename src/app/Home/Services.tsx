@@ -93,8 +93,8 @@ const Services = () => {
                 <OptimizedImage
                   src={selectedServiceData.image.src}
                   alt={`${selectedService} illustration`}
-                  fill={true}
-                  style={{ objectFit: 'cover' }}
+                  width={selectedServiceData.width}
+                  height={selectedServiceData.height}
                   className="rounded-tr-3xl"
                 />
               )}

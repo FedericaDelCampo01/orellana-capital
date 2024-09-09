@@ -46,8 +46,8 @@ const WhyCoddit = () => {
           <OptimizedImage
             src={whyCodditMobile.src}
             alt="WhyCoddit"
-            width={1155}
-            height={320}
+            width={389}
+            height={257}
           />
         </div>
       </div>

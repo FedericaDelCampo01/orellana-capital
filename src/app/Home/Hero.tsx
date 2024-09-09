@@ -8,7 +8,7 @@ const Hero = () => {
         <h1 className="text-white text-4xl md:text-5xl font-medium md:leading-[3.8rem] mb-14">
           Your partner in sustainable software innovation
         </h1>
-        <button className="px-8 py-3 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium">
+        <button className="px-8 py-3 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium text-base">
           <Link href="https://calendar.app.google/uFxrUnMRtAZZtwih9" target="_blank" rel="noopener noreferrer">Book a FREE consultation</Link>
         </button>
       </div>

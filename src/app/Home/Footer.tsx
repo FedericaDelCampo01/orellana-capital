@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
-            <h3 className="text-white text-lg font-medium mb-4">Links</h3>
+            <h1 className="text-white text-lg font-medium mb-4">Links</h1>
             <p className="text-white/70 text-sm font-extralight mb-2">
               <a href="/" className="hover:text-light-blue">Home</a>
             </p>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
-            <h3 className="text-white text-lg font-medium mb-4">Services</h3>
+            <h1 className="text-white text-lg font-medium mb-4">Services</h1>
             <p className="text-white/70 text-sm font-extralight mb-2">Product Discovery</p>
             <p className="text-white/70 text-sm font-extralight mb-2">Custom Software Development</p>
             <p className="text-white/70 text-sm font-extralight mb-2">AI Development</p>

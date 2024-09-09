@@ -55,7 +55,7 @@ const AboutUs = () => {
               a more efficient and sustainable tomorrow.
             </p>
           </div>
-          <button className="mt-6 px-8 py-3 bg-transparent border border-white/40 rounded-full text-white hover:bg-white/10 transition duration-200 text-sm font-medium">
+          <button className="mt-6 px-8 py-3 bg-transparent border border-white/40 rounded-full text-white hover:bg-white/10 transition duration-200 text-base font-medium">
             <Link
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9"
               target="_blank"

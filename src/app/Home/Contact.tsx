@@ -122,7 +122,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 >
-                  <option value="" disabled>Type of project *</option>
+                  <option value="" disabled aria-label="Select type of project" aria-hidden="true">Type of project *</option>
                   <option value="End-to-end Product Development">End-to-end Product Development</option>
                   <option value="Product Design">Product Discovery</option>
                   <option value="Product Design">Product Design</option>

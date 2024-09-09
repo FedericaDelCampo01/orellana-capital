@@ -11,6 +11,7 @@ const OptimizedImage = ({ src, alt, ...props }: OptimizedImageProps) => {
       src={src}
       alt={alt}
       loading="lazy"
+      quality={50}
       {...props}
     />
   );
