@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import OptimizedImage from './OptimizedImage'
 import whyCoddit from '../../../public/images/whyCoddit.png'
 import whyCodditMobile from '../../../public/images/whyCoddit-mobile.png'
 const reasons = [
@@ -35,20 +35,20 @@ const WhyCoddit = () => {
           </div>
         </div>
         <div className="hidden md:block w-full relative">
-              <Image
-              src={whyCoddit} 
-              alt="WhyCoddit"
-              width={1155}
-              height={320}
-            />
+          <OptimizedImage
+            src={whyCoddit.src}
+            alt="WhyCoddit"
+            width={1155}
+            height={320}
+          />
         </div>
         <div className="md:hidden block w-full relative">
-              <Image
-              src={whyCodditMobile} 
-              alt="WhyCoddit"
-              width={1155}
-              height={320}
-            />
+          <OptimizedImage
+            src={whyCodditMobile.src}
+            alt="WhyCoddit"
+            width={1155}
+            height={320}
+          />
         </div>
       </div>
     </section>

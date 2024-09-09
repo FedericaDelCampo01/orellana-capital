@@ -1,7 +1,7 @@
 "use client"
 
 import { FormEvent, useState } from 'react';
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 import contact from '../../../public/images/contact.png';
 
 const Contact = () => {
@@ -65,9 +65,11 @@ const Contact = () => {
     <section id='contact' className="bg-dark-blue font-sans overflow-hidden w-full">
       <div className="flex md:flex-row flex-col items-center justify-center">
         <div className="lg:w-1/2 hidden md:block">
-          <Image
-            src={contact}
+          <OptimizedImage
+            src={contact.src}
             alt="Contact"
+            width={627}
+            height={570}
             className="relative w-full h-auto"
           />
         </div>
@@ -160,9 +162,11 @@ const Contact = () => {
           </form>
         </div>
         <div className="block md:hidden w-full my-20">
-          <Image
-            src={contact}
+          <OptimizedImage
+            src={contact.src}
             alt="Contact"
+            width={627}
+            height={570}
             className="relative w-full h-auto"
           />
         </div>

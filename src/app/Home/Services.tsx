@@ -1,6 +1,6 @@
 "use client"
 
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 import ServiceCard from './ServiceCard';
 import { useState } from 'react';
 
@@ -90,8 +90,8 @@ const Services = () => {
               }}
             >
               {selectedServiceData && (
-                <Image
-                  src={selectedServiceData.image}
+                <OptimizedImage
+                  src={selectedServiceData.image.src}
                   alt={`${selectedService} illustration`}
                   layout="fill"
                   objectFit="cover"

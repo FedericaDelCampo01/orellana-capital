@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 import world from '../../../public/images/about-us.svg';
 import satelite from '../../../public/images/satelite.svg';
 import Link from 'next/link';
@@ -22,8 +22,8 @@ const AboutUs = () => {
 
       <div className="container max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center relative -mt-64">
         <div className="mt-[-30px] md:mt-0 md:w-1/2 mb-16 md:mb-0">
-          <Image
-            src={world}
+          <OptimizedImage
+            src={world.src}
             alt="About Us"
             width={627}
             height={570}
@@ -35,8 +35,8 @@ const AboutUs = () => {
               transition: 'transform 0.1s ease-out'
             }}
           >
-            <Image
-              src={satelite}
+            <OptimizedImage
+              src={satelite.src}
               alt="Satellite"
               width={333}
               height={250}
