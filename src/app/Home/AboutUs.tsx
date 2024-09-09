@@ -16,7 +16,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section id='about-us' className="bg-dark-blue font-sans overflow-hidden">
+    <section id='about-us' className="bg-dark-blue overflow-hidden">
 
       <div className="relative h-96 inset-x-0 top-0 md:w-[calc(100vw+80px)] md:left-[-40px] w-[calc(100vw+200px)] left-[-100px] bg-gradient-to-b from-[#D9D9D9]/20 via-transparent to-transparent" style={{ transform: 'scaleY(0.5)', borderRadius: '50%' }}></div>
 

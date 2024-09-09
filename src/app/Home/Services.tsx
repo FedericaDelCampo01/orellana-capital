@@ -58,7 +58,7 @@ const Services = () => {
   const selectedServiceData = services.find(service => service.title === selectedService);
 
   return (
-    <section id='services' className="bg-dark-blue font-sans overflow-hidden w-full px-4 py-12">
+    <section id='services' className="bg-dark-blue overflow-hidden w-full px-4 py-12">
       <div className="container mx-auto md:max-w-5xl bg-white/[.14] rounded-xl md:rounded-3xl">
         <div className='flex flex-col md:flex-row relative'>
           <div className="md:w-7/12 p-6 md:p-12">
@@ -93,8 +93,8 @@ const Services = () => {
                 <OptimizedImage
                   src={selectedServiceData.image.src}
                   alt={`${selectedService} illustration`}
-                  layout="fill"
-                  objectFit="cover"
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
                   className="rounded-tr-3xl"
                 />
               )}

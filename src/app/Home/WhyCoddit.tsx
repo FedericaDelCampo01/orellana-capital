@@ -18,7 +18,7 @@ const reasons = [
 
 const WhyCoddit = () => {
   return (
-    <section id='why-coddit' className="bg-dark-blue font-sans overflow-hidden w-full px-4 py-12 md:pb-20">
+    <section id='why-coddit' className="bg-dark-blue overflow-hidden w-full px-4 py-12 md:pb-20">
       <div className="container mx-auto md:max-w-5xl bg-white/[.14] rounded-xl md:rounded-3xl">
         <div className="flex md:flex-row flex-col w-full gap-12 p-6 md:p-12 mb-[-80px] md:mb-[-100px]">
           <div className="w-full md:w-1/4">

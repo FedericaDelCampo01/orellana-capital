@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Euclid Circular B, sans-serif'],
+        sans: ['var(--font-euclid)', 'sans-serif']
       },
       colors: {
         transparent: 'transparent',

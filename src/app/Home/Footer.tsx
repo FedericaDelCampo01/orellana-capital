@@ -7,7 +7,7 @@ import greenGeeksBanner from "../../../public/images/greengeeks-banner.png";
 const Footer = () => {
 
   return (
-    <section className="bg-dark-blue font-sans overflow-hidden w-full px-4 md:pt-24 pb-8">
+    <section className="bg-dark-blue overflow-hidden w-full px-4 md:pt-24 pb-8">
       <div className="container mx-auto md:max-w-5xl bg-white/[.14] rounded-xl md:rounded-3xl md:mb-16">
         <div className="flex flex-wrap md:flex-nowrap justify-between p-8 md:p-12 md:pb-8">
           <div className="flex flex-col justify-between w-full md:w-1/4 mb-8 md:mb-0">

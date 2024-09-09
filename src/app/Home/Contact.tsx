@@ -62,7 +62,7 @@ const Contact = () => {
 
 
   return (
-    <section id='contact' className="bg-dark-blue font-sans overflow-hidden w-full">
+    <section id='contact' className="bg-dark-blue overflow-hidden w-full">
       <div className="flex md:flex-row flex-col items-center justify-center">
         <div className="lg:w-1/2 hidden md:block">
           <OptimizedImage

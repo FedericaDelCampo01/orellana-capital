@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const BannerCTA = () => {
   return (
-    <section className="w-full h-auto bg-dark-blue py-20 font-sans">
+    <section className="w-full h-auto bg-dark-blue py-20">
       <div className="w-full h-auto custom-banner-gradient">
         <div className='max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center w-full py-12 px-4 md:px-6'>
 
