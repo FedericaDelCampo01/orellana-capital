@@ -2,8 +2,7 @@
 
 import OptimizedImage from '../Utility/OptimizedImage';
 import logoImage from "../../../public/images/logo.svg";
-import greenGeeksBanner from "../../../public/images/greengeeks-banner.png";
-
+import Image from 'next/image';
 const Footer = () => {
 
   return (
@@ -19,10 +18,10 @@ const Footer = () => {
               className=" -ml-4 -mt-1"
             />
             <div className="flex space-x-4 mt-6">
-              <a 
-                href="https://www.linkedin.com/company/coddit-io" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.linkedin.com/company/coddit-io"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-light-blue"
                 aria-label="LinkedIn"
               >
@@ -30,9 +29,9 @@ const Footer = () => {
                   <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
                 </svg>
               </a>
-              <a 
-                href="https://github.com/coddit-io" 
-                target="_blank" rel="noopener noreferrer" 
+              <a
+                href="https://github.com/coddit-io"
+                target="_blank" rel="noopener noreferrer"
                 className="text-white hover:text-light-blue"
                 aria-label="GitHub"
               >
@@ -43,7 +42,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/4 mb-8 md:mb-0">
+          <div className="w-full md:w-1/5 mb-8 md:mb-0">
             <h1 className="text-white text-lg font-medium mb-4">Links</h1>
             <p className="text-white/70 text-sm font-extralight mb-2">
               <a href="/" className="hover:text-light-blue">Home</a>
@@ -71,25 +70,22 @@ const Footer = () => {
             <p className="text-white/70 text-sm font-extralight mb-2">Web Development</p>
             <p className="text-white/70 text-sm font-extralight mb-2">Staff Augmentation</p>
           </div>
+
+          {/* Green Hosting Seal Code */}
+          <div className="flex flex-col w-full md:w-2/5 md:text-right md:items-end">
+            {/* <div id="wcb" className="carbonbadge wcb-d self-start md:self-end"></div> */}
+            <a href="https://www.thegreenwebfoundation.org/" target="_blank" rel="noopener noreferrer">
+              <Image 
+                src="https://app.greenweb.org/api/v3/greencheckimage/www.coddit.io?nocache=true" 
+                alt="This website runs on green hosting - verified by thegreenwebfoundation.org" 
+                width={200} 
+                height={95}
+              />
+            </a>
+          </div>
           
-            {/* GreenGeeks Seal Code */}
-            <div className="flex flex-col w-full md:w-1/4 md:text-right">
-              <a 
-                href="https://greengeeks.com/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex md:justify-end"
-              >
-                <OptimizedImage
-                  src={greenGeeksBanner.src}
-                  alt="GreenGeeks Seal" 
-                  width={100}
-                  height={100}
-                />
-              </a>
-            </div>
-            {/* End GreenGeeks Seal Code */}
-      
+          {/* End Green Hosting Seal Code */}        
+
         </div>
         <div className="container mx-auto px-8 md:px-12 pb-8">
           <hr className="border-t border-white/50 mb-8" />

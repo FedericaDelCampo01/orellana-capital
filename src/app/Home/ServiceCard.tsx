@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, isSelecte
   return (
     <button onClick={() => handleServiceCardClick(title, onSelect)} className="w-full group">
       <div 
-        className={` rounded-xl p-4 md:px-6 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left 
+        className={`rounded-xl p-4 md:px-6 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left 
         ${isSelected ? 'h-[220px] md:h-[180px] bg-white' : 'h-[60px] bg-dark-blue'}`}
       >
         <h2 className={`text-base sm:text-lg md:text-xl font-medium ${isSelected ? 'text-dark-blue mb-4' : 'text-white mb-0'} transition-all duration-300 `}>

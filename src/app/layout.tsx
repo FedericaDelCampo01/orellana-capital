@@ -142,6 +142,12 @@ export default function RootLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Script 
+        id="carbonBadge"
+        src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" 
+        defer 
+        strategy="afterInteractive"
+      />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />

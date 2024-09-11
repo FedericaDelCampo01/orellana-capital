@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import OptimizedImage from '../Utility/OptimizedImage';
-import world from '../../../public/images/about-us.svg';
+import world from '../../../public/images/about-us.png';
 import satelite from '../../../public/images/satelite.svg';
 import Link from 'next/link';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
