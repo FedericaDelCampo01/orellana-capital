@@ -12,6 +12,8 @@ const OptimizedImage = ({ src, alt, ...props }: OptimizedImageProps) => {
       alt={alt}
       loading="lazy"
       quality={50}
+      blurDataURL="URL"
+        placeholder="blur"
       {...props}
     />
   );

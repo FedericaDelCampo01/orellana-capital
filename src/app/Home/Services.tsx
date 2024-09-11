@@ -5,9 +5,9 @@ import ServiceCard from './ServiceCard';
 import { useState } from 'react';
 
 // Import all service images
-import service1Image from '../../../public/images/service-1.png';
-import service2Image from '../../../public/images/service-2.png';
-import service3Image from '../../../public/images/service-3.png';
+import service1Image from '../../../public/images/service-1.webp';
+import service2Image from '../../../public/images/service-2.webp';
+import service3Image from '../../../public/images/service-3.webp';
 
 const Services = () => {
 
@@ -47,11 +47,14 @@ const Services = () => {
   const handleServiceClick = (title: string) => {
     if (title !== selectedService) {
       setIsImageVisible(false);
-      
-      setTimeout(() => {  
+
+      setTimeout(() => {
         setSelectedService(title);
-        setIsImageVisible(true);
       }, 200);
+
+      setTimeout(() => {
+        setIsImageVisible(true);
+      }, 250);
     }
   };
 
@@ -86,7 +89,8 @@ const Services = () => {
                 width: `${selectedServiceData?.width}px`,
                 height: `${selectedServiceData?.height}px`,
                 top: `${selectedServiceData?.top}px`,
-                right: `${selectedServiceData?.right}px`
+                right: `${selectedServiceData?.right}px`,
+                transition: 'opacity 200ms ease-in-out, width 200ms ease-in-out, height 200ms ease-in-out, top 200ms ease-in-out, right 200ms ease-in-out'
               }}
             >
               {selectedServiceData && (

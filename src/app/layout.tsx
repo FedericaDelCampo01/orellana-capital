@@ -19,19 +19,9 @@ const euclidFont = localFont({
       style: 'normal',
     },
     {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Light Italic.ttf',
-      weight: '300',
-      style: 'italic',
-    },
-    {
       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Regular.ttf',
       weight: '400',
       style: 'normal',
-    },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Italic.ttf',
-      weight: '400',
-      style: 'italic',
     },
     {
       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Medium.ttf',
@@ -39,30 +29,15 @@ const euclidFont = localFont({
       style: 'normal',
     },
     {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Medium Italic.ttf',
-      weight: '500',
-      style: 'italic',
-    },
-    {
       path: '../../public/fonts/EuclidCircularB/Euclid Circular B SemiBold.ttf',
       weight: '600',
       style: 'normal',
-    },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B SemiBold Italic.ttf',
-      weight: '600',
-      style: 'italic',
     },
     {
       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Bold.ttf',
       weight: '700',
       style: 'normal',
     },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Bold Italic.ttf',
-      weight: '700',
-      style: 'italic',
-    }
   ],
   variable: '--font-euclid',
 })
@@ -97,7 +72,7 @@ export const metadata: Metadata = {
     siteName: "Coddit",
     images: [
       {
-        url: "https://www.coddit.com/images/og-image.png",
+        url: "https://www.coddit.com/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Coddit - Sustainable Software Development",
@@ -110,7 +85,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coddit | Sustainable Software Development",
     description: "Accelerating the transition to a sustainable economy through innovative software solutions.",
-    images: ["https://www.coddit.com/images/twitter-image.png"],
+    images: ["https://www.coddit.com/images/twitter-image.webp"],
   },
   robots: {
     index: true,
@@ -151,7 +126,6 @@ export default function RootLayout({
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        <link rel="apple-touch-icon" href="/logo192.png" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <body className={`${inter.className} ${euclidFont.variable} font-sans`}>{children}</body>

@@ -1,6 +1,6 @@
 import OptimizedImage from '../Utility/OptimizedImage'
-import whyCoddit from '../../../public/images/whyCoddit.png'
-import whyCodditMobile from '../../../public/images/whyCoddit-mobile.png'
+import whyCoddit from '../../../public/images/whyCoddit.webp'
+import whyCodditMobile from '../../../public/images/whyCoddit-mobile.webp'
 const reasons = [
   {
     title: "Partner Focus",

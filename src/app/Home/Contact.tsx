@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import OptimizedImage from '../Utility/OptimizedImage';
-import contact from '../../../public/images/contact.png';
+import contact from '../../../public/images/contact.webp';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 
 const Contact = () => {
