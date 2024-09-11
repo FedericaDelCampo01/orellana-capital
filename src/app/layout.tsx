@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import GoogleAnalytics from "./Utility/GoogleAnalytics";
 
+export const runtime = 'edge';
+
 const inter = Inter({ subsets: ["latin"] });
 
 const euclidFont = localFont({

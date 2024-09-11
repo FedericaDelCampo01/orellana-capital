@@ -8,6 +8,8 @@ import WhyCoddit from "./Home/WhyCoddit"
 import Contact from "./Home/Contact"
 import Footer from "./Home/Footer"
 
+export const runtime = 'edge';
+
 export default function Home() {
   return (
     <>

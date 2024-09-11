@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import * as postmark from 'postmark';
 
+export const runtime = 'edge';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Initialize the Postmark client with your server token
   const client = new postmark.ServerClient(process.env.REACT_APP_POSTMARK_API_TOKEN as string);
