@@ -14,7 +14,7 @@ const Services = () => {
   const services = [
     {
       title: 'Custom Software Development',
-      description: "We design and build customized software solutions, including mobile and web development, backend, and AI. By using the most advanced technologies and following the best practices we ensure your solution is ready to be use today and prepared to scale tomorrow.",
+      description: "We design and build customized software solutions, from prototype to production. By using the most advanced technologies and design principles we ensure our solutions meet your business goals with the least environmental impact.",
       image: service2Image,
       width: 550,
       height: 606,
