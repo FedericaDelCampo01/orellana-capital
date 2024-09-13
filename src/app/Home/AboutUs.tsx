@@ -62,7 +62,7 @@ const AboutUs = () => {
               custom software solutions that address the challenges of today while creating
               a more efficient and sustainable tomorrow. */}
 
-              At Coddit, we're on a mission to accelerate the transition to a sustainable economy by streamlining 
+              At Coddit, we&apos;re on a mission to accelerate the transition to a sustainable economy by streamlining 
               software development for climate tech. We apply our expertise in technology to help startups and 
               enterprises design, build and launch eco-friendly digital products that drive innovation and sustainability with 
               the minimum environmental impact.
