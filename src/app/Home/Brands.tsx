@@ -25,8 +25,8 @@ const affiliates = [
 const Brands = () => {
   return (
     <>
-      <BrandBanner brands={partners} title="Trusted Partners" />
-      <BrandBanner brands={affiliates} title="Members of" />
+      <BrandBanner brands={partners} title="Our Clients" />
+      <BrandBanner brands={affiliates} title="Members Of" />
     </>
   );
 };
