@@ -1,11 +1,11 @@
 import BrandBanner from "./BrandBanner";
-import client1 from '../../../public/images/clients/eduvaluer.png'
-import client5 from '../../../public/images/clients/fotmer.png'
-import client6 from '../../../public/images/clients/emexem.png'
-import client7 from '../../../public/images/clients/grifelma.png'
-import client4 from '../../../public/images/clients/trivium.png'
-import client3 from '../../../public/images/clients/propack.png'
-import client2 from '../../../public/images/clients/verdeagua.png'
+import client1 from '../../../public/images/clients/eduvaluer.webp'
+import client5 from '../../../public/images/clients/fotmer.webp'
+import client6 from '../../../public/images/clients/emexem.webp'
+import client7 from '../../../public/images/clients/grifelma.webp'
+import client4 from '../../../public/images/clients/trivium.webp'
+import client3 from '../../../public/images/clients/propack.webp'
+import client2 from '../../../public/images/clients/verdeagua.webp'
 
 const brands = [
   {

@@ -1,5 +1,5 @@
 import OptimizedImage from "../Utility/OptimizedImage";
-import companyPic from "../../../public/images/company.png"
+import companyPic from "../../../public/images/company.webp"
 
 const WhyCompany = () => {
 

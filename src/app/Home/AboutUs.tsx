@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import OptimizedImage from '../Utility/OptimizedImage';
-import profilePic from '../../../public/images/profile-pic.png';
+import profilePic from '../../../public/images/profile-pic.webp';
 
 const AboutUs = () => {
   return (

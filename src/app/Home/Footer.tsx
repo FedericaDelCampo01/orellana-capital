@@ -1,7 +1,7 @@
 'use client'
 
 import OptimizedImage from '../Utility/OptimizedImage';
-import logoImage from "../../../public/images/logo.png";
+import logoImage from "../../../public/images/logo.webp";
 import Image from 'next/image';
 const Footer = () => {
 

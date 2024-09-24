@@ -20,8 +20,8 @@ const config: Config = {
         'blue': '#205673',
       },
       backgroundImage: {
-        'hero': "url('/images/hero-bg.png')",
-        'services': "url('/images/service-bg.png')"
+        'hero': "url('/images/hero-bg.webp')",
+        'services': "url('/images/service-bg.webp')"
       }
     },
   },

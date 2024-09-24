@@ -1,6 +1,4 @@
 import React from 'react';
-import OptimizedImage from '../Utility/OptimizedImage';
-import pologino from '../../../public/images/poligono.png'
 
 interface ServiceCardProps {
   title: string;

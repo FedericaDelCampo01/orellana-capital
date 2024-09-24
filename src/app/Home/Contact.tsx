@@ -75,7 +75,7 @@ const Contact = () => {
           <p className="text-dark-blue font-light font-body">Nos encantaría ayudarte a alcanzar tus objetivos financieros. Escribínos para solicitar una consulta personalizada.</p>
           <div className="flex items-center mt-10">
             <Image
-              src="/images/email-icon.png"
+              src="/images/email-icon.webp"
               width={32}
               height={32}
               className="mr-2" alt="Email Icon"
@@ -84,7 +84,7 @@ const Contact = () => {
           </div>
           <div className="flex items-center mt-6">
             <Image
-              src="/images/linkedin-icon.png"
+              src="/images/linkedin-icon.webp"
               width={32}
               height={32}
               className="mr-2" alt="Linkedin Icon"

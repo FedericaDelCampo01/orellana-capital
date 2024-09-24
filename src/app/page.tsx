@@ -7,7 +7,6 @@ import Brands from "./Home/Brands"
 import WhyCompany from "./Home/WhyCompany"
 import Contact from "./Home/Contact"
 import Footer from "./Home/Footer"
-import heroBackgroundImage from "../../public/images/hero-bg.png"
 
 export default function Home() {
   return (
