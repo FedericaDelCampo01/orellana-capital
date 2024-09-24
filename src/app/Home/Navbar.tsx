@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from 'next/image';
-import logoImage from '../../../public/images/logo.svg';
+import logoImage from '../../../public/images/logo.png';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 const Navbar = () => {
   const [isClicked, setIsClicked] = React.useState(false);
@@ -27,8 +27,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-dark-blue">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-transparent">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
             <div className="flex-shrink-0">
@@ -36,34 +36,43 @@ const Navbar = () => {
                 <Image
                   src={logoImage}
                   alt="Logo"
-                  width={150}
-                  height={47}
+                  width={300}
+                  height={100}
+                  className="hidden md:block"
+                />
+                <Image
+                  src={logoImage}
+                  alt="Logo"
+                  width={200}
+                  height={75}
+                  className="block md:hidden"
                 />
               </Link>
             </div>
           </div>
 
           {/* Web Menu */}
-          <div className="hidden md:block self-center">
-            <div className="ml-10 flex items-baseline space-x-6 text-base">
-              <button onClick={() => scrollToSection('about-us')} className="text-white hover:text-light-blue duration-300">About Us</button>
-              <button onClick={() => scrollToSection('services')} className="text-white hover:text-light-blue duration-300">Services</button>
-              <button onClick={() => scrollToSection('why-coddit')} className="text-white hover:text-light-blue duration-300">Why Coddit</button>
-              <button onClick={() => scrollToSection('contact')} className="text-white hover:text-light-blue duration-300">Contact</button>
+
+          <div className="hidden md:flex md:flex-row space-x-10">
+            <div className="ml-10 flex items-baseline space-x-6 text-base py-2">
+              <button onClick={() => scrollToSection('about-us')} className="text-white hover:text-blue duration-300">Sobre Nosotros</button>
+              <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue duration-300">Servicios</button>
+              <button onClick={() => scrollToSection('why-company')} className="text-white hover:text-blue duration-300">Valor Añadido</button>
             </div>
-          </div>
-          <button 
-            className="hidden md:block text-base px-8 py-3 custom-gradient text-dark-blue rounded-full font-medium"
-            onClick={handleLetsTalkClick}
-          >
-            <Link 
-              href="https://calendar.app.google/uFxrUnMRtAZZtwih9" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <button
+              className="text-base px-8 py-2 bg-white text-dark-blue rounded-md font-medium hover:bg-blue hover:text-white duration-300"
+              onClick={handleLetsTalkClick}
             >
-              Let&apos;s Talk
-            </Link>
-          </button>
+              <Link
+                href="https://calendar.app.google/uFxrUnMRtAZZtwih9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contacto
+              </Link>
+            </button>
+          </div>
+
 
           {/* Mobile Menu */}
           <div className="md:hidden relative">
@@ -85,10 +94,10 @@ const Navbar = () => {
             {/* Dropdown Menu */}
             <div className={`absolute text-center right-[-16px] mt-8 w-screen bg-dark-blue text-white shadow-lg duration-300 ease-in-out ${isClicked ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-8 opacity-0'}`}>
               <div className="px-2 py-2 space-y-1">
-                <button onClick={() => scrollToSection('about-us')} className="block text-white hover:text-light-blue duration-300 p-5">About Us</button>
-                <button onClick={() => scrollToSection('services')} className="block text-white hover:text-light-blue duration-300 p-5">Services</button>
-                <button onClick={() => scrollToSection('why-coddit')} className="block text-white hover:text-light-blue duration-30 p-5">Why Coddit</button>
-                <button onClick={() => scrollToSection('contact')} className="block text-white hover:text-light-blue duration-300 p-5">Contact</button>
+                <button onClick={() => scrollToSection('about-us')} className="block text-white hover:text-light-blue duration-300 p-5">Sobre Nosotros</button>
+                <button onClick={() => scrollToSection('services')} className="block text-white hover:text-light-blue duration-300 p-5">Servicios</button>
+                <button onClick={() => scrollToSection('why-company')} className="block text-white hover:text-light-blue duration-30 p-5">Valor Añadido</button>
+                <button onClick={() => scrollToSection('contact')} className="block text-white hover:text-light-blue duration-300 p-5">Contacto</button>
               </div>
             </div>
           </div>

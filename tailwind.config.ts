@@ -9,24 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-euclid)', 'sans-serif']
+        h1: ['Inter', 'bold'],
+        h2: ['Inter', 'bold'],
+        h3: ['Inter', 'bold'],
+        p: ['Nokora']
       },
       colors: {
         transparent: 'transparent',
-        'dark-blue': '#0D1223',
-        'blue': '#0850C0',
-        'light-blue': '#7EE7E1',
-        'lime-green': '#99EE94',
-        'white': '#EDEDED',
-        'grey': '#525661'
+        'dark-blue': '#01233F',
+        'blue': '#205673',
       },
-      backgroundSize: {
-        'size-200': '200% 200%',
-      },
-      backgroundPosition: {
-        'pos-0': '0% 0%',
-        'pos-100': '100% 100%',
-      },
+      backgroundImage: {
+        'hero': "url('/images/hero-bg.png')",
+        'services': "url('/images/service-bg.png')"
+      }
     },
   },
   plugins: [],

@@ -1,107 +1,50 @@
-"use client"
-
-import OptimizedImage from '../Utility/OptimizedImage';
 import ServiceCard from './ServiceCard';
-import { useState } from 'react';
-
-// Import all service images
-import service1Image from '../../../public/images/service-1.webp';
-import service2Image from '../../../public/images/service-2.webp';
-import service3Image from '../../../public/images/service-3.webp';
 
 const Services = () => {
 
   const services = [
     {
-      title: 'Custom Software Development',
-      description: "We design and build customized software solutions, from prototype to production. By using the most advanced technologies and design principles we ensure our solutions meet your business goals with the least environmental impact.",
-      image: service2Image,
-      width: 550,
-      height: 606,
-      top: -25,
-      right: 0
+      title: 'Finanzas Corporativas y Estrategia',
+      description: "Asesoramos a empresas en fusiones, adquisiciones y valoraciones, diseñando estrategias financieras que maximizan el valor y optimizan la estructura de capital.",
+      services: ['Valoración de empresas.', 'Modelos financieros detallados.', 'Asesoría en fusiones y adquisiciones.']
     },
     {
-      title: 'Analysis & Discovery',
-      description: "This stage of the process is designed to validate ideas, conduct thorough market research, and define your MVP (Minimum Viable Product). We identify opportunities and challenges from the start so you can navigate the development process with confidence.",
-      image: service1Image,
-      width: 500,
-      height: 566,
-      top: -10,
-      right: -80
+      title: 'Levantamiento de Capital',
+      description: "Brindamos apoyo integral para el levantamiento de capital, desde la preparación de teasers y decks de inversión hasta la negociación de contratos y la optimización de términos clave.",
+      services: ['Preparación de documentos para inversores.', 'Asesoría en cláusulas y covenants.', 'Gestión del proceso de inversión.']
     },
     {
-      title: 'Staff Augmentation',
-      description: "With our flexible staffing solutions, you can scale your teams up or down as needed, ensuring you have the right talent in place to tackle any challenge. Enhance your team's capabilities and capacity with highly qualifies developers only.",
-      image: service3Image,
-      width: 541,
-      height: 451,
-      top: 80,
-      right: 0
+      title: 'Venture Capital',
+      description: "Ayudamos a startups y empresas en expansión a preparar sus modelos financieros, desarrollar métricas y a optimizar sus estrategias para atraer inversión de Venture Capital.",
+      services: ['Desarrollo de modelos financieros para startups.', 'Medición de métricas clave.', 'Asesoría en la captación de fondos de  Venture Capital.']
+    },
+    {
+      title: 'Mergers and Acquisitions',
+      description: "Asesoramos en todo el proceso de fusiones y adquisiciones, gestionando las negociaciones y asegurando un acuerdo estratégico que aporte valor a las partes involucradas.",
+      services: ['Asesoría estratégica en procesos de M&A.', 'Valoración, estructuración y cierre de acuerdos.', 'Negociación con todas las partes implicadas.']
     }
   ];
 
-  const [selectedService, setSelectedService] = useState(services[0].title);
-  const [isImageVisible, setIsImageVisible] = useState(true);
-
-  const handleServiceClick = (title: string) => {
-    if (title !== selectedService) {
-      setIsImageVisible(false);
-
-      setTimeout(() => {
-        setSelectedService(title);
-      }, 200);
-
-      setTimeout(() => {
-        setIsImageVisible(true);
-      }, 250);
-    }
-  };
-
-  const selectedServiceData = services.find(service => service.title === selectedService);
-
   return (
-    <section id='services' className="bg-dark-blue overflow-hidden w-full px-4 py-12">
-      <div className="container mx-auto md:max-w-5xl bg-white/[.14] rounded-xl md:rounded-3xl">
+    <section id='services' className="bg-services bg-cover overflow-hidden w-full px-4 py-12">
+      <div className="container mx-auto md:max-w-6xl">
         <div className='flex flex-col md:flex-row relative'>
-          <div className="md:w-7/12 p-6 md:p-12">
-            <h1 className="text-white text-2xl font-medium mb-4">Our Services</h1>
-            <p className="text-white text-base font-light mb-8">
-              We offer a range of services to assist you at every stage of your development process.
+          <div className="md:py-16">
+            <h1 className="text-white text-3xl font-bold mb-6">Nuestros Servicios</h1>
+            <p className="text-white text-base font-light mb-16 md:w-7/12">
+              Ofrecemos soluciones financieras integrales para ayudar a empresas a crecer y maximizar su valor. Nuestros servicios principales son:
             </p>
-            <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  title={service.title}
-                  description={service.description}
-                  isSelected={selectedService === service.title}
-                  onSelect={() => handleServiceClick(service.title)}
-                />
+                <div className="w-full h-full flex" key={index}>
+                  <ServiceCard
+                    title={service.title}
+                    description={service.description}
+                    services={service.services}
+                    key={index}
+                  />
+                </div>
               ))}
-            </div>
-          </div>
-          <div className="hidden md:block md:w-5/12 relative">
-            <div
-              className={`absolute transition-opacity duration-200 ease-in-out ${isImageVisible ? 'opacity-100' : 'opacity-0'
-                }`}
-              style={{
-                width: `${selectedServiceData?.width}px`,
-                height: `${selectedServiceData?.height}px`,
-                top: `${selectedServiceData?.top}px`,
-                right: `${selectedServiceData?.right}px`,
-                transition: 'opacity 200ms ease-in-out, width 200ms ease-in-out, height 200ms ease-in-out, top 200ms ease-in-out, right 200ms ease-in-out'
-              }}
-            >
-              {selectedServiceData && (
-                <OptimizedImage
-                  src={selectedServiceData.image.src}
-                  alt={`${selectedService} illustration`}
-                  width={selectedServiceData.width}
-                  height={selectedServiceData.height}
-                  className="rounded-tr-3xl"
-                />
-              )}
             </div>
           </div>
         </div>

@@ -13,15 +13,20 @@ const handleHeroClick = () => {
 
 const Hero = () => {
   return (
-    <section className="bg-dark-blue flex items-center justify-center">
-      <div className="text-center max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 mb-4 md:mt-36 md:mb-12">
-        <h1 className="text-white text-4xl md:text-5xl font-medium md:leading-[3.8rem] mb-14">
-          Your partner in sustainable software innovation
+    <section className="flex flex-col bg-transparent items-center justify-center">
+      <div className="flex flex-col text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 md:my-52 my-12">
+        <h1 className="text-white text-2xl md:text-5xl font-bold md:leading-[3.8rem] mb-10">
+          Impulsamos tu Crecimiento Empresarial con Soluciones Financieras Estratégicas
         </h1>
-        <button onClick={handleHeroClick} className="px-8 py-3 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium text-base">
-          <Link href="https://calendar.app.google/uFxrUnMRtAZZtwih9" target="_blank" rel="noopener noreferrer">Book a FREE consultation</Link>
+        <p className="text-white text-sm md:text-lg max-w-xl font-light text-center self-center mb-12">
+          Más de 15 años de experiencia en finanzas corporativas, banca de inversión y consultoría empresarial.
+        </p>
+        <button onClick={handleHeroClick} className="self-center px-8 py-3 w-fit bg-white  hover:bg-blue text-dark-blue duration-300 hover:text-white rounded-lg font-medium text-base">
+          <Link href="https://calendar.app.google/uFxrUnMRtAZZtwih9" target="_blank" rel="noopener noreferrer">Descubre cómo podemos ayudarte</Link>
         </button>
       </div>
+
+      {/* <ClientLogos /> */}
     </section>
   );
 }

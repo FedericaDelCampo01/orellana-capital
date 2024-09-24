@@ -12,12 +12,12 @@ const handleBannerCTAClick = () => {
 
 const BannerCTA = () => {
   return (
-    <section className="w-full h-auto bg-dark-blue py-20">
+    <section className="w-full h-auto bg-dark-blue py-10">
       <div className="w-full h-auto custom-banner-gradient">
-        <div className='max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center w-full py-12 px-4 md:px-6'>
+        <div className='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center w-full py-8'>
 
-          <div className="text-center md:text-left mb-6 md:mb-0 max-w-[300px]">
-            <h2 className="text-lg md:text-2xl font-medium text-dark-blue">Schedule a FREE 30-min consultation call</h2>
+          <div className="text-center mx-20 md:mx-0 md:text-left mb-6 md:mb-0 max-w-[350px]">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Impulsá el crecimiento de tu empresa</h2>
 
           </div>
           <button onClick={handleBannerCTAClick} className="text-center md:text-right">
@@ -25,9 +25,9 @@ const BannerCTA = () => {
               href="https://calendar.app.google/uFxrUnMRtAZZtwih9" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-block text-base px-8 py-4 bg-dark-blue hover:bg-white text-white hover:text-dark-blue border-2 border-dark-blue duration-300 rounded-full font-medium"
+              className="inline-block text-base px-8 py-4 bg-white hover:bg-blue text-dark-blue hover:text-white border-2 border-dark-blue duration-300 rounded-lg font-medium"
             >
-              Let&apos;s discuss your project
+              Solicitá una consulta personalizada
             </Link>
           </button>
 

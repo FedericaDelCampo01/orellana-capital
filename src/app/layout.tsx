@@ -11,81 +11,71 @@ export const runtime = 'edge';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const euclidFont = localFont({
-  src: [
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B SemiBold.ttf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/EuclidCircularB/Euclid Circular B Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-euclid',
-})
+// const euclidFont = localFont({
+//   src: [
+//     {
+//       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Light.ttf',
+//       weight: '300',
+//       style: 'normal',
+//     },
+//     {
+//       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Regular.ttf',
+//       weight: '400',
+//       style: 'normal',
+//     },
+//     {
+//       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Medium.ttf',
+//       weight: '500',
+//       style: 'normal',
+//     },
+//     {
+//       path: '../../public/fonts/EuclidCircularB/Euclid Circular B SemiBold.ttf',
+//       weight: '600',
+//       style: 'normal',
+//     },
+//     {
+//       path: '../../public/fonts/EuclidCircularB/Euclid Circular B Bold.ttf',
+//       weight: '700',
+//       style: 'normal',
+//     },
+//   ],
+//   variable: '--font-euclid',
+// })
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Coddit",
-  "url": "https://www.coddit.com",
-  "logo": "https://www.coddit.com/images/logo.svg",
-  "description": "Coddit specializes in custom software development, analysis & discovery, and staff augmentation, designing and building sustainable and eco-friendly solutions.",
-  "sameAs": [
-    "https://www.linkedin.com/company/coddit-io",
-    "https://github.com/coddit-io"
-  ],
+  "name": "Orellana Capital Advisors",
+  "url": "https://www.orellanacapitaladvisors.com",
+  "logo": "https://www.orellanacapitaladvisors.com/images/logo.svg",
+  "description": "",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "email": "info@coddit.com"
+    "email": "info@orellanacapitaladvisors.com"
   }
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.coddit.com"),
-  title: "Coddit | Sustainable Software Development",
-  description: "Coddit specializes in custom software development, analysis & discovery, and staff augmentation, focusing on sustainable and eco-friendly solutions.",
-  keywords: "Coddit, sustainable software, custom development, staff augmentation, eco-friendly tech",
+  metadataBase: new URL("https://www.orellanacapitaladvisors.com"),
+  title: "Orellana Capital Advisors",
+  description: "Asesoramiento Financiero Estratégico",
+  keywords: "asesoramiento,finanzas, estrategia, consultoria",
   openGraph: {
-    title: "Coddit | Sustainable Software Development",
-    description: "Accelerating the transition to a sustainable economy through innovative software solutions.",
-    url: "https://www.coddit.com",
-    siteName: "Coddit",
+    title: "Orellana Capital Advisors | Asesoramiento Financiero Estratégico",
+    description: "Impulsamos tu Crecimiento Empresarial con Soluciones Financieras Estratégicas",
+    url: "https://www.orellanacapitaladvisors.com",
+    siteName: "Orellana Capital Advisors",
     images: [
       {
-        url: "https://www.coddit.com/images/og-image.webp",
+        url: "https://www.orellanacapitaladvisors.com/images/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Coddit - Sustainable Software Development",
+        alt: "Orellana Capital Advisor - Asesoramiento Financiero Estratégico",
       },
     ],
-    locale: "en_US",
+    locale: "es_ES",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Coddit | Sustainable Software Development",
-    description: "Accelerating the transition to a sustainable economy through innovative software solutions.",
-    images: ["https://www.coddit.com/images/twitter-image.webp"],
   },
   robots: {
     index: true,
@@ -117,18 +107,13 @@ export default function RootLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Script 
-        id="carbonBadge"
-        src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" 
-        defer 
-        strategy="afterInteractive"
-      />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <body className={`${inter.className} ${euclidFont.variable} font-sans`}>{children}</body>
+      <body >{children}</body>
     </html>
   );
 }
+// className={`${inter.className} ${euclidFont.variable} font-sans`}

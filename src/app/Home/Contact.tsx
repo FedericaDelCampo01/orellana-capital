@@ -1,9 +1,8 @@
 'use client'
 
 import { FormEvent, useState } from 'react';
-import OptimizedImage from '../Utility/OptimizedImage';
-import contact from '../../../public/images/contact.webp';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
+import Image from 'next/image';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -44,13 +43,13 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
+
       const data = await response.json();
-  
+
       console.log(data);
       setSuccessMessage('Message sent successfully!');
       setFormData({ name: '', email: '', phone: '', type: '', message: '' });
@@ -69,114 +68,94 @@ const Contact = () => {
   };
 
   return (
-    <section id='contact' className="bg-dark-blue overflow-hidden w-full">
-      <div className="flex md:flex-row flex-col items-center justify-center">
-        <div className="lg:w-1/2 hidden md:block">
-          <OptimizedImage
-            src={contact.src}
-            alt="Contact"
-            width={627}
-            height={570}
-            className="relative w-full h-auto"
-          />
+    <section id='contact' className="bg-dark-blue/20 overflow-hidden">
+      <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center relative my-10 md:my-24 md:space-x-20 px-4">
+        <div className="w-full lg:w-1/2 pr-10 flex flex-col">
+          <h1 className="text-dark-blue text-3xl font-bold mb-8">Contacto</h1>
+          <p className="text-dark-blue font-light">Nos encantaría ayudarte a alcanzar tus objetivos financieros. Escribínos para solicitar una consulta personalizada.</p>
+          <div className="flex items-center mt-10">
+            <Image
+              src="/images/email-icon.png"
+              width={32}
+              height={32}
+              className="mr-2" alt="Email Icon"
+            />
+            <a href="mailto:alejandrohughes1@gmail.com" className="text-dark-blue font-light">alejandrohughes1@gmail.com</a>
+          </div>
+          <div className="flex items-center mt-6">
+            <Image
+              src="/images/linkedin-icon.png"
+              width={32}
+              height={32}
+              className="mr-2" alt="Linkedin Icon"
+            />
+            <a href="https://www.linkedin.com/in/alejandro-hughes-stefani-9b501a48/" className="text-dark-blue font-light">Alejandro Hughes</a>
+          </div>
         </div>
-        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-6 md:p-12 lg:mr-[15%]">
-          <h1 className="text-white text-3xl font-medium mb-16">Let&apos;s work together!</h1>
+        <div className="mt-10 md:mt-0 w-full lg:w-1/2 flex flex-col items-center justify-center">
 
           <form className="w-full" onSubmit={handleSubmit}>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <input
-                  className={`appearance-none block w-full bg-transparent text-white border ${errors.name ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20`}
-                  type="text"
-                  placeholder="Name *"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
-              </div>
-              <div className="w-full md:w-1/2 px-3">
-                <input
-                  className={`appearance-none block w-full bg-transparent text-white border ${errors.email ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 leading-tight focus:outline-none focus:bg-white/20`}
-                  type="email"
-                  placeholder="Email *"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
-              </div>
+            <div className="w-full">
+              <input
+                className={`appearance-none block w-full bg-white text-white border ${errors.name ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20`}
+                type="text"
+                placeholder="Nombre y apellido"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              {errors.name && <p className="text-red-500 text-xs italic">{errors.name}</p>}
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3">
-                <input
-                  className="appearance-none block w-full bg-transparent text-white border border-white/30 rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20"
-                  type="tel"
-                  placeholder="Phone Number"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="w-full md:w-1/2 px-3">
-                <select
-                  className={`appearance-none block w-full bg-transparent text-white border ${errors.type ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20`}
-                  name="type"
-                  value={formData.type}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled aria-label="Select type of project" aria-hidden="true">Type of project *</option>
-                  <option value="End-to-end Product Development">End-to-end Product Development</option>
-                  <option value="Product Design">Product Discovery</option>
-                  <option value="Product Design">Product Design</option>
-                  <option value="Product Design">Web Design</option>
-                  <option value="Custom Software Development">Custom Software Development</option>
-                  <option value="AI Development">AI Development</option>
-                  <option value="App Development">App Development</option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="Staff Augmentation">Staff Augmentation</option>
-                  <option value="Other">Other</option>
-                </select>
-                {errors.type && <p className="text-red-500 text-xs italic">{errors.type}</p>}
-              </div>
+
+            <div className="w-full">
+              <input
+                className={`appearance-none block w-full bg-white text-white border ${errors.email ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6  mb-3  leading-tight focus:outline-none focus:bg-white/20`}
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              {errors.email && <p className="text-red-500 text-xs italic">{errors.email}</p>}
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
-                <textarea
-                  className={`no-resize appearance-none block w-full bg-transparent text-white border ${errors.message ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20 h-48 resize-none`}
-                  placeholder="Project details *"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.message && <p className="text-red-500 text-xs italic">{errors.message}</p>}
-              </div>
+
+            <div className="w-full">
+              <input
+                className="appearance-none block w-full bg-white text-white border border-white/30 rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20"
+                type="tel"
+                placeholder="Numero de teléfono"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
             </div>
+
+
+            <div className="w-full">
+              <textarea
+                className={`no-resize appearance-none block w-full bg-white text-white border ${errors.message ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20 h-36 resize-none`}
+                placeholder="Mensaje"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+              {errors.message && <p className="text-red-500 text-xs italic">{errors.message}</p>}
+            </div>
+
             {successMessage && (
               <div className="bg-lime-green text-dark-blue p-2 pl-4 rounded-lg text-center mb-4">{successMessage}</div>
             )}
             <button
-              className="w-full py-4 custom-gradient hover:bg-white text-dark-blue duration-300 rounded-full font-medium"
+              className="w-full py-4 bg-dark-blue text-white hover:bg-blue hover:text-white duration-300 rounded-md font-medium"
               type="submit"
               onClick={handleContactClick}
             >
-              Send message!
+              Enviar
             </button>
           </form>
-        </div>
-        <div className="block md:hidden w-full my-20">
-          <OptimizedImage
-            src={contact.src}
-            alt="Contact"
-            width={627}
-            height={570}
-            className="relative w-full h-auto"
-          />
         </div>
       </div>
     </section>

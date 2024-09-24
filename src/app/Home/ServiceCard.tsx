@@ -1,38 +1,41 @@
 import React from 'react';
-import { trackEvent } from '../Utility/AnalyticsHelpers';
+import OptimizedImage from '../Utility/OptimizedImage';
+import pologino from '../../../public/images/poligono.png'
 
 interface ServiceCardProps {
   title: string;
   description: string;
-  isSelected: boolean;
-  onSelect: () => void;
+  services: string[];
 }
 
-const handleServiceCardClick = (title: string, onSelect: () => void) => {
-  trackEvent('button_click', {
-    button_name: `Service Card ${title}`,
-    section: 'Services'
-  });
-  onSelect();
-};
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, isSelected, onSelect }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, services }) => {
   return (
-    <button onClick={() => handleServiceCardClick(title, onSelect)} className="w-full group">
-      <div 
-        className={`rounded-xl p-4 md:px-6 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left 
-        ${isSelected ? 'h-[220px] md:h-[180px] bg-white' : 'h-[60px] bg-dark-blue'}`}
-      >
-        <h2 className={`text-base sm:text-lg md:text-xl font-medium ${isSelected ? 'text-dark-blue mb-4' : 'text-white mb-0'} transition-all duration-300 `}>
+    <div className='flex flex-col shadow-lg shadow-dark-blue/20'>
+      <div className="p-8 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left bg-white">
+        <h2 className={`text-base sm:text-lg md:text-xl font-medium text-dark-blue mb-4' transition-all duration-300 mb-4`}>
           {title}
         </h2>
-        <div className={`transition-all duration-300 ${isSelected ? 'opacity-100' : 'opacity-0 -translate-y-2'}`}>
-          <p className="text-dark-blue text-sm font-light">
-            {description}
-          </p>
-        </div>
+        <p className="text-dark-blue font-light">
+          {description}
+        </p>
+        <p className="text-dark-blue mt-10 mb-6 font-bold">
+          Servicios Incluidos:
+        </p>
+        {services.map((service, index) => (
+          <div className='flex flex-row justify-start items-start py-2' key={index}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6l6 6-6 6" className="text-dark-blue" />
+            </svg>
+            <p
+              key={index}
+              className="text-dark-blue font-light">
+              {service}
+            </p>
+          </div>
+        ))}
       </div>
-    </button>
+      <div className='h-2 w-full bg-dark-blue'/>
+    </div>
   );
 };
 

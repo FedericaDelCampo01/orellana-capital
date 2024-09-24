@@ -1,8 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import * as postmark from 'postmark';
 
-export const runtime = 'edge';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Initialize the Postmark client with your server token
   const client = new postmark.ServerClient(process.env.REACT_APP_POSTMARK_API_TOKEN as string);
@@ -11,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     try {
       const { name, email, phone, type, message } = req.body;
-      const subject = `New ${type} inquiry from ${name}`;
+      const subject = `Nueva consulta en la web por parte de: ${name}`;
 
       // Send email
       const emailResponse = await client.sendEmail({
@@ -19,20 +17,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         To: senderEmail,
         Subject: subject,
         HtmlBody: `
-          <h2>New Project Inquiry</h2>
-          <p><strong>Name:</strong> ${name}</p>
+          <h2>Nuevo mensaje desde la web</h2>
+          <p><strong>Nombre:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-          <p><strong>Type of Project:</strong> ${type}</p>
-          <h3>Message:</h3>
+          <p><strong>Telefono:</strong> ${phone || 'Not provided'}</p>
+          <h3><Mensaje:</h3>
           <p>${message}</p>
         `,
       });
 
-      console.log('Email Sent:', emailResponse); // Log the response from Postmark
-      return res.status(200).json({ message: 'Email sent successfully', emailResponse });
+      console.log('Email enviado:', emailResponse); // Log the response from Postmark
+      return res.status(200).json({ message: 'Email enviado con éxito', emailResponse });
     } catch (error: any) {
-      return res.status(500).json({ error: 'Error sending email', details: error.message });
+      return res.status(500).json({ error: 'Error al enviar email', details: error.message });
     }
   } else {
     return res.status(405).json({ error: 'Method not allowed..' });
