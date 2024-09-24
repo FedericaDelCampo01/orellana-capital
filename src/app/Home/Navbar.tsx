@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-transparent">
+    <nav className="bg-transparent font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
@@ -60,7 +60,7 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('why-company')} className="text-white hover:text-blue duration-300">Valor Añadido</button>
             </div>
             <button
-              className="text-base px-8 py-2 bg-white text-dark-blue rounded-md font-medium hover:bg-blue hover:text-white duration-300"
+              className="text-base px-8 py-2 bg-white text-dark-blue rounded-md font-semibold hover:bg-blue hover:text-white duration-300"
               onClick={handleLetsTalkClick}
             >
               <Link

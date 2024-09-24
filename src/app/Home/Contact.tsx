@@ -71,8 +71,8 @@ const Contact = () => {
     <section id='contact' className="bg-dark-blue/20 overflow-hidden">
       <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center relative my-10 md:my-24 md:space-x-20 px-4">
         <div className="w-full lg:w-1/2 pr-10 flex flex-col">
-          <h1 className="text-dark-blue text-3xl font-bold mb-8">Contacto</h1>
-          <p className="text-dark-blue font-light">Nos encantaría ayudarte a alcanzar tus objetivos financieros. Escribínos para solicitar una consulta personalizada.</p>
+          <h1 className="text-dark-blue text-3xl font-bold mb-8 font-h1">Contacto</h1>
+          <p className="text-dark-blue font-light font-body">Nos encantaría ayudarte a alcanzar tus objetivos financieros. Escribínos para solicitar una consulta personalizada.</p>
           <div className="flex items-center mt-10">
             <Image
               src="/images/email-icon.png"
@@ -80,7 +80,7 @@ const Contact = () => {
               height={32}
               className="mr-2" alt="Email Icon"
             />
-            <a href="mailto:alejandrohughes1@gmail.com" className="text-dark-blue font-light">alejandrohughes1@gmail.com</a>
+            <a href="mailto:alejandrohughes1@gmail.com" className="text-dark-blue font-light font-body">alejandrohughes1@gmail.com</a>
           </div>
           <div className="flex items-center mt-6">
             <Image
@@ -89,15 +89,15 @@ const Contact = () => {
               height={32}
               className="mr-2" alt="Linkedin Icon"
             />
-            <a href="https://www.linkedin.com/in/alejandro-hughes-stefani-9b501a48/" className="text-dark-blue font-light">Alejandro Hughes</a>
+            <a href="https://www.linkedin.com/in/alejandro-hughes-stefani-9b501a48/" className="text-dark-blue font-light font-body">Alejandro Hughes</a>
           </div>
         </div>
         <div className="mt-10 md:mt-0 w-full lg:w-1/2 flex flex-col items-center justify-center">
 
-          <form className="w-full" onSubmit={handleSubmit}>
+          <form className="w-full font-body font-light" onSubmit={handleSubmit}>
             <div className="w-full">
               <input
-                className={`appearance-none block w-full bg-white text-white border ${errors.name ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20`}
+                className={`appearance-none block w-full bg-white text-white border ${errors.name ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none `}
                 type="text"
                 placeholder="Nombre y apellido"
                 name="name"
@@ -149,7 +149,7 @@ const Contact = () => {
               <div className="bg-lime-green text-dark-blue p-2 pl-4 rounded-lg text-center mb-4">{successMessage}</div>
             )}
             <button
-              className="w-full py-4 bg-dark-blue text-white hover:bg-blue hover:text-white duration-300 rounded-md font-medium"
+              className="w-full py-4 bg-dark-blue text-white hover:bg-blue hover:text-white duration-300 rounded-md font-semibold font-body"
               type="submit"
               onClick={handleContactClick}
             >

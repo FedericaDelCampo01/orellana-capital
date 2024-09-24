@@ -14,9 +14,12 @@ const Footer = () => {
           width={250}
           height={130}
         />
-        <p className="text-white/70 text-sm font-extralight text-center">
+        <p className="text-white/70 text-sm font-extralight text-center font-body">
           © 2024 Orellana Capital Advisors. All Rights Reserved
         </p>
+        <a href="https://coddit.io" target="_blank" rel="noopener noreferrer" className="text-white/70 text-sm font-extralight text-center font-body">
+          Site by Coddit
+        </a>
       </div>
     </section>
   )

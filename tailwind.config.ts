@@ -12,7 +12,7 @@ const config: Config = {
         h1: ['Inter', 'bold'],
         h2: ['Inter', 'bold'],
         h3: ['Inter', 'bold'],
-        p: ['Nokora']
+        body: ['Nokora', 'sans-serif']
       },
       colors: {
         transparent: 'transparent',
