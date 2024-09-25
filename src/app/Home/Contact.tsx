@@ -70,8 +70,8 @@ const Contact = () => {
   return (
     <section id='contact' className="bg-dark-blue/20 overflow-hidden">
       <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center relative my-10 md:my-24 md:space-x-20 px-4">
-        <div className="w-full lg:w-1/2 pr-10 flex flex-col">
-          <h1 className="text-dark-blue text-3xl font-bold mb-8 font-h1">Contacto</h1>
+        <div className="w-full lg:w-1/2 pr-10 flex flex-col px-4 md:px-0">
+          <h1 className="text-dark-blue text-xl md:text-3xl font-bold mb-8 font-h1">Contacto</h1>
           <p className="text-dark-blue font-light font-body">Nos encantaría ayudarte a alcanzar tus objetivos financieros. Escribínos para solicitar una consulta personalizada.</p>
           <div className="flex items-center mt-10">
             <Image

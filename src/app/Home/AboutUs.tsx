@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center my-10 px-4 md:my-24 md:space-x-20">
         <div className="px-4 md:px-0 md:w-1/2">
           <div>
-            <h3 className="text-3xl md:text-3xl font-bold text-dark-blue md:leading-[48px] mb-7 font-h3">Sobre Nosotros</h3>
+            <h3 className="text-xl md:text-3xl font-bold text-dark-blue md:leading-[48px] mb-7 font-h3">Sobre Nosotros</h3>
             <p className="text-dark-blue font-light leading-[29px] text-base mb-8 font-body">
               Somos una firma especializada en brindar asesoramiento financiero estratégico, liderada por Alejandro Hughes, un profesional con más de 15 años de experiencia en finanzas corporativas, banca de inversión y gestión empresarial.
             </p>

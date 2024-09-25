@@ -30,8 +30,8 @@ const Services = () => {
       <div className="container mx-auto md:max-w-6xl">
         <div className='flex flex-col md:flex-row relative'>
           <div className="md:py-16">
-            <h1 className="text-white text-3xl font-bold mb-6 font-h1">Nuestros Servicios</h1>
-            <p className="text-white text-base font-light mb-16 md:w-7/12 font-body">
+            <h1 className="text-white text-xl md:text-3xl font-bold mb-6 font-h1 px-4 md:px-0">Nuestros Servicios</h1>
+            <p className="text-white text-base font-light mb-16 md:w-7/12 font-body px-4 md:px-0">
               Ofrecemos soluciones financieras integrales para ayudar a empresas a crecer y maximizar su valor. Nuestros servicios principales son:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

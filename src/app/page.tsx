@@ -11,7 +11,7 @@ import Footer from "./Home/Footer"
 export default function Home() {
   return (
     <>
-      <div className="bg-cover bg-hero w-full h-[500px] md:h-[850px]">
+      <div className="bg-cover bg-hero w-full h-[600px] md:h-[850px]">
         <Navbar />
         <Hero />
       </div>

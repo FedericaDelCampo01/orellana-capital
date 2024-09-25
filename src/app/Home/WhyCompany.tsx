@@ -15,8 +15,8 @@ const WhyCompany = () => {
       <div className="container max-w-6xl mx-auto my-10 md:py-16 flex flex-col md:flex-row items-center relative md:my-24 md:space-x-20 px-4">
         <div className="px-4 md:px-0 md:w-1/2">
           <div>
-            <h2 className="text-blue font-bold font-h2">Valor Añadido</h2>
-            <h3 className="text-3xl md:text-3xl font-bold text-dark-blue md:leading-[48px] mb-7 font-h3">Por Qué Elegirnos</h3>
+            <h2 className="text-blue font-bold font-h2 mb-2">Valor Añadido</h2>
+            <h3 className="text-xl md:text-3xl font-bold text-dark-blue md:leading-[48px] mb-7 font-h3">Por Qué Elegirnos</h3>
             <p className="text-dark-blue font-light leading-[29px] text-base mb-8 font-body">
               Nuestra experiencia, red de contactos y enfoque orientado a resultados nos permiten ofrecer un servicio de alto valor para nuestros clientes. Adaptamos nuestras soluciones a las necesidades específicas de cada empresa, asegurando un crecimiento sostenible y rentable.
             </p>
