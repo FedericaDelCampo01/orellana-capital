@@ -10,7 +10,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, services 
   return (
     <div className='flex flex-col shadow-lg shadow-dark-blue/20'>
       <div className="p-8 flex-1 transition-all duration-300 ease-in-out overflow-hidden text-left bg-white">
-        <h2 className={`text-base sm:text-lg md:text-xl font-medium text-dark-blue mb-4' transition-all duration-300 mb-4 font-h1`}>
+        <h2 className={`text-base sm:text-lg md:text-xl font-bold text-dark-blue mb-4' transition-all duration-300 mb-4 font-h1`}>
           {title}
         </h2>
         <p className="text-dark-blue font-light font-body">

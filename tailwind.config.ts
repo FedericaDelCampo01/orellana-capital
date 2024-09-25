@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        h1: ['Inter', 'bold'],
-        h2: ['Inter', 'bold'],
-        h3: ['Inter', 'bold'],
+        h1: ['Inter', 'sans-serif'],
+        h2: ['Inter', 'sans-serif'],
+        h3: ['Inter', 'sans-serif'],
         body: ['Nokora', 'sans-serif']
       },
       colors: {
