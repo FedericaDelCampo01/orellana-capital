@@ -22,7 +22,7 @@ const BannerCTA = () => {
           </div>
           <button onClick={handleBannerCTAClick} className="text-center md:text-right">
             <Link 
-              href="https://calendar.app.google/uFxrUnMRtAZZtwih9" 
+              href="" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block text-base px-8 py-4 bg-white hover:bg-blue text-dark-blue hover:text-white border-2 border-dark-blue duration-300 rounded-lg font-semibold font-body"

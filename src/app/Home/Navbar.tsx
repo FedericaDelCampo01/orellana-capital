@@ -64,7 +64,7 @@ const Navbar = () => {
               onClick={handleLetsTalkClick}
             >
               <Link
-                href="https://calendar.app.google/uFxrUnMRtAZZtwih9"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
               >

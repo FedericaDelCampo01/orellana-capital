@@ -22,7 +22,7 @@ const Hero = () => {
           Más de 15 años de experiencia en finanzas corporativas, banca de inversión y consultoría empresarial.
         </p>
         <button onClick={handleHeroClick} className="self-center font-body px-8 py-3 w-fit bg-white  hover:bg-blue text-dark-blue duration-300 hover:text-white rounded-lg font-semibold text-base">
-          <Link href="https://calendar.app.google/uFxrUnMRtAZZtwih9" target="_blank" rel="noopener noreferrer">Descubre cómo podemos ayudarte</Link>
+          <Link href="" target="_blank" rel="noopener noreferrer">Descubre cómo podemos ayudarte</Link>
         </button>
       </div>
     </section>
