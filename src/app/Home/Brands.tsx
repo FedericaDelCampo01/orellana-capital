@@ -33,12 +33,6 @@ const brands = [
     alt: "Trivium"
   },
   {
-    src: client5.src,
-    width: 236,
-    height: 44,
-    alt: "Fotmer"
-  },
-  {
     src: client6.src,
     width: 157,
     height: 35,
@@ -49,6 +43,12 @@ const brands = [
     width: 64,
     height: 32,
     alt: "Grifelma"
+  },
+  {
+    src: client5.src,
+    width: 236,
+    height: 44,
+    alt: "Fotmer"
   }
 ];
 
