@@ -80,7 +80,7 @@ const Contact = () => {
               height={32}
               className="mr-2" alt="Email Icon"
             />
-            <a href="mailto:alejandrohughes1@gmail.com" className="text-dark-blue font-light font-body">alejandrohughes1@gmail.com</a>
+            <a href="mailto:alejandro@orellanacapitaladvisors.com" className="text-dark-blue font-light font-body">alejandro@orellanacapitaladvisors.com</a>
           </div>
           <div className="flex items-center mt-6">
             <Image
@@ -97,7 +97,7 @@ const Contact = () => {
           <form className="w-full font-body font-light" onSubmit={handleSubmit}>
             <div className="w-full">
               <input
-                className={`appearance-none block w-full bg-white text-white border ${errors.name ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none `}
+                className={`appearance-none block w-full bg-white text-dark-blue border ${errors.name ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none `}
                 type="text"
                 placeholder="Nombre y apellido"
                 name="name"
@@ -110,7 +110,7 @@ const Contact = () => {
 
             <div className="w-full">
               <input
-                className={`appearance-none block w-full bg-white text-white border ${errors.email ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6  mb-3  leading-tight focus:outline-none focus:bg-white/20`}
+                className={`appearance-none block w-full bg-white text-dark-blue border ${errors.email ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6  mb-3  leading-tight focus:outline-none`}
                 type="email"
                 placeholder="Email"
                 name="email"
@@ -123,7 +123,7 @@ const Contact = () => {
 
             <div className="w-full">
               <input
-                className="appearance-none block w-full bg-white text-white border border-white/30 rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20"
+                className="appearance-none block w-full bg-white text-dark-blue border border-white/30 rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none "
                 type="tel"
                 placeholder="Numero de teléfono"
                 name="phone"
@@ -135,7 +135,7 @@ const Contact = () => {
 
             <div className="w-full">
               <textarea
-                className={`no-resize appearance-none block w-full bg-white text-white border ${errors.message ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none focus:bg-white/20 h-36 resize-none`}
+                className={`no-resize appearance-none block w-full bg-white text-dark-blue border ${errors.message ? 'border-red-500' : 'border-white/30'} rounded-lg py-4 px-6 mb-3 leading-tight focus:outline-none  h-36 resize-none`}
                 placeholder="Mensaje"
                 name="message"
                 value={formData.message}
