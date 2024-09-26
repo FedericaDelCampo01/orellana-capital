@@ -17,10 +17,10 @@ const BannerCTA = () => {
         <div className='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center w-full py-8'>
 
           <div className="text-center mx-16 md:mx-0 md:text-left mb-6 md:mb-0 max-w-[350px]">
-            <h2 className="text-2xl md:text-3xl font-bold text-white font-h2">Impulsá el crecimiento de tu empresa</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white font-h2 fade-up-init">Impulsá el crecimiento de tu empresa</h2>
 
           </div>
-          <button onClick={handleBannerCTAClick} className="text-center md:text-right">
+          <button onClick={handleBannerCTAClick} className="text-center md:text-right fade-up-init">
             <Link 
               href="" 
               target="_blank" 
