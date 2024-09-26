@@ -9,7 +9,6 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    type: '',
     message: ''
   });
 
@@ -27,7 +26,6 @@ const Contact = () => {
     const newErrors: { [key: string]: string } = {};
     if (!formData.name) newErrors.name = 'Name is required';
     if (!formData.email) newErrors.email = 'Email is required';
-    if (!formData.type) newErrors.type = 'Type of project is required';
     if (!formData.message) newErrors.message = 'Message is required';
 
     if (Object.keys(newErrors).length > 0) {
@@ -51,8 +49,8 @@ const Contact = () => {
       const data = await response.json();
 
       console.log(data);
-      setSuccessMessage('Message sent successfully!');
-      setFormData({ name: '', email: '', phone: '', type: '', message: '' });
+      setSuccessMessage('Mensaje enviado correctamente!');
+      setFormData({ name: '', email: '', phone: '', message: '' });
       setErrors({});
     } catch (error) {
       console.error('Error:', error);
