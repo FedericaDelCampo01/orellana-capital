@@ -2,12 +2,15 @@
 
 import Link from 'next/link';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
+import { scrollToSection } from '../Utility/ScrollHelpers';
 
 const handleBannerCTAClick = () => {
   trackEvent('button_click', {
     button_name: 'Banner CTA',
     section: 'Banner CTA'
   });
+
+  scrollToSection('contact')
 };
 
 const BannerCTA = () => {
@@ -20,15 +23,8 @@ const BannerCTA = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white font-h2">Impulsá el crecimiento de tu empresa</h2>
 
           </div>
-          <button onClick={handleBannerCTAClick} className="text-center md:text-right fade-in-init">
-            <Link 
-              href="" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-block text-base px-8 py-4 bg-white hover:bg-blue text-dark-blue hover:text-white border-2 border-dark-blue duration-300 rounded-lg font-semibold font-body"
-            >
+          <button onClick={handleBannerCTAClick} className="text-center md:text-right fade-in-init inline-block text-base px-8 py-4 bg-white hover:bg-blue text-dark-blue hover:text-white border-2 border-dark-blue duration-300 rounded-lg font-semibold font-body">
               Solicitá una consulta personalizada
-            </Link>
           </button>
 
         </div>
