@@ -10,9 +10,11 @@
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "next": "14.2.7",
     "postmark": "^4.0.5",
     "react": "^18",
+    "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18"
   },
   "devDependencies": {

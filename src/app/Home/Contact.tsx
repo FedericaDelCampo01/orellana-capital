@@ -90,7 +90,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/alejandro-hughes-stefani-9b501a48/" className="text-dark-blue font-light font-body">Alejandro Hughes</a>
           </div>
         </div>
-        <div className="mt-10 md:mt-0 w-full lg:w-1/2 flex flex-col items-center justify-center fade-up-init">
+        <div className="mt-10 md:mt-0 w-full lg:w-1/2 flex flex-col items-center justify-center">
 
           <form className="w-full font-body font-light" onSubmit={handleSubmit}>
             <div className="w-full">

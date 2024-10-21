@@ -1,14 +1,16 @@
 'use client'
 
 import React from 'react';
-import Link from 'next/link';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
+import { scrollToSection } from '../Utility/ScrollHelpers';
 
 const handleHeroClick = () => {
   trackEvent('button_click', {
     button_name: 'Free Consultation',
     section: 'Hero'
   });
+
+  scrollToSection('services')
 };
 
 const Hero = () => {
@@ -19,10 +21,10 @@ const Hero = () => {
           Impulsamos tu Crecimiento Empresarial con Soluciones Financieras Estratégicas
         </h1>
         <p className="text-white text-base md:text-lg max-w-xl font-light text-center self-center mb-12 font-body fade-up-init">
-          Más de 15 años de experiencia en finanzas corporativas, banca de inversión y consultoría empresarial.
+          Más de 15 años de experiencia en M&A, finanzas corporativas, banca de inversión y consultoría empresarial.
         </p>
         <button onClick={handleHeroClick} className="self-center font-body px-8 py-3 w-fit bg-white  hover:bg-blue text-dark-blue duration-300 hover:text-white rounded-lg font-semibold text-base fade-up-init">
-          <Link href="" target="_blank" rel="noopener noreferrer">Descubre cómo podemos ayudarte</Link>
+          Descubre cómo podemos ayudarte
         </button>
       </div>
     </section>

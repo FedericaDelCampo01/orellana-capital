@@ -5,6 +5,8 @@ import React from "react";
 import Image from 'next/image';
 import logoImage from '../../../public/images/logo.webp';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
+import { scrollToSection } from '../Utility/ScrollHelpers';
+
 const Navbar = () => {
   const [isClicked, setIsClicked] = React.useState(false);
 
@@ -12,18 +14,13 @@ const Navbar = () => {
     setIsClicked(!isClicked);
   };
 
-  function scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const handleLetsTalkClick = () => {
     trackEvent('button_click', {
       button_name: 'Let\'s Talk Navbar',
       section: 'Navbar'
     });
+
+    scrollToSection('contact')
   };
 
   return (
@@ -57,19 +54,13 @@ const Navbar = () => {
             <div className="ml-10 flex items-baseline space-x-6 text-base py-2">
               <button onClick={() => scrollToSection('about-us')} className="text-white hover:text-blue duration-300">Sobre Nosotros</button>
               <button onClick={() => scrollToSection('services')} className="text-white hover:text-blue duration-300">Servicios</button>
-              <button onClick={() => scrollToSection('why-company')} className="text-white hover:text-blue duration-300">Valor Añadido</button>
+              <button onClick={() => scrollToSection('why-company')} className="text-white hover:text-blue duration-300">Por qué Orellana Capital</button>
             </div>
             <button
               className="text-base px-8 py-2 bg-white text-dark-blue rounded-md font-semibold hover:bg-blue hover:text-white duration-300"
               onClick={handleLetsTalkClick}
             >
-              <Link
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contacto
-              </Link>
+              Contacto
             </button>
           </div>
 
@@ -96,7 +87,7 @@ const Navbar = () => {
               <div className="px-2 py-2 space-y-1">
                 <button onClick={() => scrollToSection('about-us')} className="block text-white hover:text-light-blue duration-300 p-5">Sobre Nosotros</button>
                 <button onClick={() => scrollToSection('services')} className="block text-white hover:text-light-blue duration-300 p-5">Servicios</button>
-                <button onClick={() => scrollToSection('why-company')} className="block text-white hover:text-light-blue duration-30 p-5">Valor Añadido</button>
+                <button onClick={() => scrollToSection('why-company')} className="block text-white hover:text-light-blue duration-30 p-5">Por qué Orellana Capital</button>
                 <button onClick={() => scrollToSection('contact')} className="block text-white hover:text-light-blue duration-300 p-5">Contacto</button>
               </div>
             </div>

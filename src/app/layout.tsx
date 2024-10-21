@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import 'animate.css';
 import Head from 'next/head';
 import favicon from '../../public/favicon.ico';
 import localFont from "next/font/local";

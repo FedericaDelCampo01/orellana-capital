@@ -13,49 +13,49 @@ const brands = [
     width: 230,
     height: 58,
     alt: "Eduvaler",
-    description: "Eduvaler es una empresa líder en la educación en línea."
+    description: "Software de educación y gestión emocional."
   },
   {
     src: client2.src,
     width: 224,
     height: 39,
     alt: "Verdeagua",
-    description: "Verdeagua es una empresa comprometida con el cuidado del medio ambiente."
+    description: "Producción hidropónica de vegetales."
   },
   {
     src: client3.src,
     width: 96,
     height: 63,
     alt: "Propack",
-    description: "Propack es una empresa especializada en empaquetado y logística."
+    description: "Packaging de PET para la industria de alimenticia."
   },
   {
     src: client4.src,
     width: 149,
     height: 71,
     alt: "Trivium",
-    description: "Trivium es una empresa de tecnología innovadora."
+    description: "Software administrativo y de gestión académica para la educación."
   },
   {
     src: client6.src,
     width: 157,
     height: 35,
     alt: "Emexem",
-    description: "Emexem es una empresa de comercio electrónico."
+    description: "Retail & e-commerce, merchandising para empresas y camisetas personalizadas."
   },
   {
     src: client7.src,
     width: 64,
     height: 32,
     alt: "Grifelma",
-    description: "Grifelma es una empresa de manufactura de componentes."
+    description: "Imprenta industrial y digital."
   },
   {
     src: client5.src,
     width: 236,
     height: 44,
     alt: "Fotmer",
-    description: "Fotmer es una empresa de servicios de marketing digital."
+    description: "Principal exportador de Cannabis medicinal del Uruguay."
   }
 ];
 
