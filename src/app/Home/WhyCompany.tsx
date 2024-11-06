@@ -43,6 +43,7 @@ const WhyCompany = () => {
             alt="About Us"
             width={627}
             height={570}
+            quality={100}
           />
         </div>
       </div>
