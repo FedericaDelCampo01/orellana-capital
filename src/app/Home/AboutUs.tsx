@@ -25,6 +25,7 @@ const AboutUs = () => {
           <OptimizedImage
             src={profilePic.src}
             alt="About Us"
+            quality={100}
             width={627}
             height={570}
           />
