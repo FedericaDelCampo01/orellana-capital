@@ -83,7 +83,7 @@ const Navbar = () => {
               )}
             </button>
             {/* Dropdown Menu */}
-            <div className={`absolute text-center right-[-16px] mt-8 w-screen bg-dark-blue text-white shadow-lg duration-300 ease-in-out ${isClicked ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-8 opacity-0'}`}>
+            <div className={`absolute text-center right-[-16px] mt-8 w-screen bg-dark-blue text-white shadow-lg duration-300 ease-in-out ${isClicked ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-8 opacity-0'}`} style={{ zIndex: 9999 }}>
               <div className="px-2 py-2 space-y-1">
                 <button onClick={() => scrollToSection('about-us')} className="block text-white hover:text-light-blue duration-300 p-5">Sobre Nosotros</button>
                 <button onClick={() => scrollToSection('services')} className="block text-white hover:text-light-blue duration-300 p-5">Servicios</button>

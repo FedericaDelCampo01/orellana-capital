@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import OptimizedImage from '../Utility/OptimizedImage';
-import profilePic from '../../../public/images/profile-pic.webp';
+import profilePic from '../../../public/images/profile-pic.jpg';
 
 const AboutUs = () => {
   return (
@@ -21,7 +21,18 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <div className="pt-16 md:pt-0 flex items-center justify-center fade-in-init">
+        <div className="md:w-1/2 flex items-center justify-center rounded-md md:h-[550px] h-[350px] overflow-hidden mt-10 md:mt-0">
+          <OptimizedImage
+            className='w-full h-full object-cover'
+            src={profilePic.src}
+            alt="About Us"
+            width={450}
+            height={450}
+            quality={100}
+          />
+        </div>
+
+        {/* <div className="md:w-1/2 flex items-center justify-center">
           <OptimizedImage
             src={profilePic.src}
             alt="About Us"
@@ -29,7 +40,16 @@ const AboutUs = () => {
             width={627}
             height={570}
           />
-        </div>
+        </div>  */}
+        {/* <div className="pt-16 md:pt-0 flex items-center justify-center fade-in-init">
+          <OptimizedImage
+            src={profilePic.src}
+            alt="About Us"
+            quality={100}
+            width={627}
+            height={570}
+          />
+        </div> */}
 
       </div>
     </section>
