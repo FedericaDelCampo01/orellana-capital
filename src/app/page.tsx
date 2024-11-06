@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-cover bg-hero w-full h-[600px] md:h-[850px] bg-fixed">
+      <div className="bg-cover bg-hero w-full h-[600px] md:h-[850px] bg-fixed ">
         <Navbar />
         <Hero />
       </div>
