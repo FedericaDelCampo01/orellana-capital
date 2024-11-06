@@ -23,7 +23,7 @@ const Hero = () => {
         <p className="text-white text-base md:text-lg max-w-xl font-light text-center self-center mb-12 font-body fade-up-init">
           Más de 15 años de experiencia en M&A, finanzas corporativas, banca de inversión y consultoría empresarial.
         </p>
-        <button onClick={handleHeroClick} className="self-center font-body px-8 py-3 w-fit bg-white  hover:bg-blue text-dark-blue duration-300 hover:text-white rounded-lg font-semibold text-base fade-up-init">
+        <button onClick={handleHeroClick} className="self-center font-body px-8 py-3 w-fit bg-white  hover:bg-blue text-dark-blue duration-300 hover:text-white rounded-lg font-semibold text-base">
           Descubre cómo podemos ayudarte
         </button>
       </div>
