@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <section id='contact' className="bg-dark-blue/20 overflow-hidden">
+    <section id='contact' className="bg-light-blue overflow-hidden">
       <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center relative my-10 md:my-20 md:space-x-20 px-4">
         <div className="w-full lg:w-1/2 pr-10 flex flex-col px-4 md:px-0">
           <h1 className="text-dark-blue text-xl md:text-3xl font-bold mb-8 font-h1 fade-up-init">Contacto</h1>

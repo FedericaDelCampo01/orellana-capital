@@ -1,6 +1,5 @@
 import BrandBanner from "./BrandBannerSquares";
 import client1 from '../../../public/images/clients/eduvaluer.webp'
-import client5 from '../../../public/images/clients/fotmer.webp'
 import client6 from '../../../public/images/clients/emexem.webp'
 import client7 from '../../../public/images/clients/grifelma.webp'
 import client4 from '../../../public/images/clients/trivium.webp'
@@ -49,13 +48,6 @@ const brands = [
     height: 32,
     alt: "Grifelma",
     description: "Imprenta industrial y digital."
-  },
-  {
-    src: client5.src,
-    width: 236,
-    height: 44,
-    alt: "Fotmer",
-    description: "Principal exportador de Cannabis medicinal del Uruguay."
   }
 ];
 

@@ -18,7 +18,6 @@ const AboutUs = () => {
             </p>
             <p className="text-dark-blue font-light leading-[29px] text-base font-body fade-up-init text-justify">
               Nuestro enfoque personalizado y pragmático nos permite ofrecer soluciones financieras que maximicen el valor para cada cliente.
-
             </p>
           </div>
         </div>

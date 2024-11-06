@@ -18,6 +18,7 @@ const config: Config = {
         transparent: 'transparent',
         'dark-blue': '#01233F',
         'blue': '#205673',
+        'light-blue': '#E8F0F2'
       },
       backgroundImage: {
         'hero': "url('/images/hero-bg.webp')",

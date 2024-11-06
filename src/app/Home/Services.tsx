@@ -26,7 +26,7 @@ const Services = () => {
   ];
 
   return (
-    <section id='services' className="bg-services bg-cover overflow-hidden w-full px-4 py-12">
+    <section id='services' className="bg-services bg-cover overflow-hidden w-full px-4 py-12 bg-fixed">
       <div className="container mx-auto md:max-w-6xl">
         <div className='flex flex-col md:flex-row relative'>
           <div className="md:py-16">

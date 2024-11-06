@@ -15,7 +15,7 @@ interface BrandBannerProps {
 
 const BrandBanner: React.FC<BrandBannerProps> = ({ brands, title }) => {
   return (
-    <section className="bg-dark-blue/20">
+    <section className="bg-light-blue">
       <div className="max-w-6xl m-auto md:py-24 py-12">
         <h2 className="md:text-3xl text-xl font-semibold text-dark-blue text-center md:pb-20 pb-12">{title}</h2>
         <div className="flex flex-wrap justify-center gap-4">
