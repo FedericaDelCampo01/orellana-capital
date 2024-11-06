@@ -48,7 +48,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "Orellana Capital Advisors",
   "url": "https://www.orellanacapitaladvisors.com",
-  "logo": "https://www.orellanacapitaladvisors.com/images/logo.svg",
+  "logo": "https://www.orellanacapitaladvisors.com/images/logo.png",
   "description": "",
   "contactPoint": {
     "@type": "ContactPoint",

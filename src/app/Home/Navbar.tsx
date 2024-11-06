@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from 'next/image';
-import logoImage from '../../../public/images/logo.webp';
+import logoImage from '../../../public/images/logo.png';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 import { scrollToSection } from '../Utility/ScrollHelpers';
 
