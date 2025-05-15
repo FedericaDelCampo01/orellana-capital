@@ -22,13 +22,6 @@ const brands = [
     description: "Producción hidropónica de vegetales."
   },
   {
-    src: client3.src,
-    width: 96,
-    height: 63,
-    alt: "Propack",
-    description: "Packaging de PET para la industria de alimenticia."
-  },
-  {
     src: client4.src,
     width: 149,
     height: 71,

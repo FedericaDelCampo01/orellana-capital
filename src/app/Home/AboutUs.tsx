@@ -31,26 +31,6 @@ const AboutUs = () => {
             quality={100}
           />
         </div>
-
-        {/* <div className="md:w-1/2 flex items-center justify-center">
-          <OptimizedImage
-            src={profilePic.src}
-            alt="About Us"
-            quality={100}
-            width={627}
-            height={570}
-          />
-        </div>  */}
-        {/* <div className="pt-16 md:pt-0 flex items-center justify-center fade-in-init">
-          <OptimizedImage
-            src={profilePic.src}
-            alt="About Us"
-            quality={100}
-            width={627}
-            height={570}
-          />
-        </div> */}
-
       </div>
     </section>
   );
