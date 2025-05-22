@@ -5,6 +5,7 @@ import client7 from '../../../public/images/clients/grifelma.webp'
 import client4 from '../../../public/images/clients/trivium.webp'
 import client3 from '../../../public/images/clients/propack.webp'
 import client2 from '../../../public/images/clients/verdeagua.webp'
+import client8 from '../../../public/images/clients/genersol.webp'
 
 const brands = [
   {
@@ -41,6 +42,13 @@ const brands = [
     height: 32,
     alt: "Grifelma",
     description: "Imprenta industrial y digital."
+  },
+  {
+    src: client8.src,
+    width: 150,
+    height: 35,
+    alt: "Genersol",
+    description: "Productos y servicios para los sectores de energía, industria y defensa."
   }
 ];
 
