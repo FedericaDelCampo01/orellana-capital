@@ -14,7 +14,7 @@ const AboutUs = () => {
               Somos una firma especializada en brindar asesoramiento financiero estratégico, liderada por Alejandro Hughes, un profesional con más de 15 años de experiencia en M&A, finanzas corporativas, banca de inversión y gestión empresarial.
             </p>
             <p className="text-dark-blue font-light leading-[29px] text-base mb-8 font-body fade-up-init md:text-justify">
-              A lo largo de su carrera, Alejandro ha liderado exitosamente numerosas rondas de inversión, negociaciones complejas y adquisiciones a nivel local e internacional. Con una sólida red de contactos en el sector financiero, su experiencia abarca mercados como Uruguay, España, Australia, y otras regiones, lo que le otorga una perspectiva global para cada transacción.
+              A lo largo de su carrera, Alejandro ha liderado exitosamente numerosas rondas de inversión, negociaciones complejas y adquisiciones a nivel local e internacional. Con una sólida red de contactos en el sector financiero, su experiencia abarca mercados como Uruguay, España, Australia, y otras regiones, lo que le otorga una perspectiva global para cada transacción. Además, Alejandro es Docente en la Facultad de Ciencias Empresariales y Economía de la Universidad de Montevideo, en la materia Fusiones y Adquisiciones.
             </p>
             <p className="text-dark-blue font-light leading-[29px] text-base font-body fade-up-init md:text-justify">
               Nuestro enfoque personalizado y pragmático nos permite ofrecer soluciones financieras que maximicen el valor para cada cliente.

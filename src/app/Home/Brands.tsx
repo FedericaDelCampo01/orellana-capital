@@ -55,7 +55,7 @@ const brands = [
 const Brands = () => {
   return (
     <>
-      <BrandBanner brands={brands} title="Nuestros Clientes"/>
+      <BrandBanner brands={brands} title="Algunos de nuestros Clientes"/>
     </>
   );
 };
