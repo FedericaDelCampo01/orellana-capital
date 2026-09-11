@@ -41,6 +41,7 @@ const Services = () => {
                     title={service.title}
                     description={service.description}
                     services={service.services}
+                    index={index}
                     key={index}
                   />
                 </div>
