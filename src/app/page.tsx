@@ -65,8 +65,8 @@ export default function Home() {
       <AboutUs />
       <Services />
       <Brands />
-      <WhyCompany />
       <BannerCTA />
+      <WhyCompany />
       <Contact />
       <Footer />
     </>
