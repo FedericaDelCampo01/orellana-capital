@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <section id='about-us' className="bg-white overflow-hidden">
 
-      <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center my-10 px-4 md:my-20 md:space-x-20">
+      <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center md:items-stretch my-10 px-4 md:my-20 md:space-x-20">
         <div className="px-4 md:px-0 md:w-1/2">
           <div>
             <h2 className="text-blue font-bold font-h2 mb-2 fade-up-init">Orellana Capital</h2>
@@ -33,38 +33,37 @@ const AboutUs = () => {
             <p className="text-dark-blue font-light leading-[29px] text-base font-body fade-up-init md:text-justify">
               Nuestro enfoque personalizado y pragmático nos permite ofrecer soluciones financieras que maximicen el valor para cada cliente.
             </p>
-
-            <div className="mt-10 pt-8 border-t border-dark-blue/10 grid grid-cols-2 gap-6 fade-up-init">
-              <div>
-                <p className="text-3xl font-bold text-blue font-h2">+15</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-dark-blue/60 font-body mt-2">
-                  Años de experiencia
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-blue font-h2">3</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-dark-blue/60 font-body mt-2">
-                  Continentes con operaciones
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div className="group relative md:w-1/2 w-full rounded-2xl md:h-[550px] h-[350px] overflow-hidden mt-10 md:mt-0 shadow-xl shadow-dark-blue/20 ring-1 ring-dark-blue/10 fade-in-init">
+        <div className="group relative md:w-1/2 w-full rounded-2xl h-[420px] md:h-auto overflow-hidden mt-10 md:mt-0 shadow-xl shadow-dark-blue/20 ring-1 ring-dark-blue/10 fade-in-init">
           <OptimizedImage
-            className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
+            className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105'
             src={profilePic.src}
             alt="Alejandro Hughes"
             width={450}
             height={450}
             quality={100}
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-dark-blue/90 to-transparent pt-16 pb-6 px-6">
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-dark-blue via-dark-blue/85 to-transparent pt-24 pb-7 px-7">
             <p className="text-white font-bold text-lg font-h2">Alejandro Hughes</p>
             <p className="text-white/75 text-sm font-light font-body mt-1">
               M&A, finanzas corporativas y banca de inversión
             </p>
+            <div className="mt-5 pt-5 border-t border-white/20 flex gap-10">
+              <div>
+                <p className="text-2xl font-bold text-white font-h2">+15</p>
+                <p className="text-[11px] uppercase tracking-[0.15em] text-white/60 font-body mt-1">
+                  Años de experiencia
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-white font-h2">3</p>
+                <p className="text-[11px] uppercase tracking-[0.15em] text-white/60 font-body mt-1">
+                  Continentes con operaciones
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
