@@ -111,7 +111,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/alejandro-hughes-stefani-9b501a48/"
+              href="https://www.linkedin.com/company/orellana-capital-advisors/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-4 bg-white rounded-xl px-5 py-4 ring-1 ring-dark-blue/5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-dark-blue/10 fade-up-init"
@@ -121,7 +121,7 @@ const Contact = () => {
               </span>
               <span className="min-w-0">
                 <span className="block text-xs uppercase tracking-[0.15em] text-blue font-semibold font-body">LinkedIn</span>
-                <span className="block text-dark-blue font-light font-body mt-1">Alejandro Hughes</span>
+                <span className="block text-dark-blue font-light font-body mt-1">Orellana Capital Advisors</span>
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-auto shrink-0 text-blue transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6l6 6-6 6" />
