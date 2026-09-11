@@ -58,7 +58,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-cover bg-hero w-full h-[600px] md:h-[850px] md:bg-fixed">
+      <div className="relative bg-cover bg-hero w-full h-[600px] md:h-[850px] md:bg-fixed">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark-blue/70 to-transparent" />
         <Navbar />
         <Hero />
       </div>
