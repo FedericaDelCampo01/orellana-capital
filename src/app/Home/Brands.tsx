@@ -24,15 +24,16 @@ const brands = [
   },
   {
     src: "/images/clients/grifelma.webp",
-    width: 64,
-    height: 32,
+    width: 122,
+    height: 122,
     alt: "Grifelma",
-    description: "Imprenta industrial y digital."
+    description: "Imprenta industrial y digital.",
+    opaqueBg: true
   },
   {
     src: "/images/clients/genersol.webp",
     width: 150,
-    height: 35,
+    height: 32,
     alt: "Genersol",
     description: "Productos y servicios para los sectores de energía, industria y defensa."
   },
@@ -42,9 +43,10 @@ const brands = [
     height: 83,
     alt: "Edintor SA",
     description: "Importación y venta de las líneas de herramientas INGCO y WADFOW.",
+    largeLogo: true,
     subBrands: [
-      { src: "/images/clients/ingco.png", width: 1600, height: 1600, alt: "Ingco" },
-      { src: "/images/clients/wadfow.png", width: 1200, height: 628, alt: "Wadfow" },
+      { src: "/images/clients/ingco.png", width: 1600, height: 1600, alt: "Ingco", opaqueBg: true },
+      { src: "/images/clients/wadfow.png", width: 1200, height: 628, alt: "Wadfow", opaqueBg: true },
       { src: "/images/clients/osburk.png", width: 1600, height: 1600, alt: "Osburk" }
     ]
   },

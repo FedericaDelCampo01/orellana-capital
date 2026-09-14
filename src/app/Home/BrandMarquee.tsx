@@ -7,6 +7,8 @@ interface SubBrand {
   width: number;
   height: number;
   alt: string;
+  /** El archivo tiene fondo sólido: no lo pasamos a blanco porque quedaría un bloque */
+  opaqueBg?: boolean;
 }
 
 interface Brand {
@@ -15,6 +17,10 @@ interface Brand {
   height: number;
   alt: string;
   description: string;
+  /** El archivo tiene fondo sólido: no lo pasamos a blanco porque quedaría un bloque */
+  opaqueBg?: boolean;
+  /** Escala el logo hasta llenar la caja en vez de dejarlo en su tamaño natural */
+  largeLogo?: boolean;
   subBrands?: SubBrand[];
 }
 
@@ -23,16 +29,19 @@ interface BrandMarqueeProps {
   title: string;
 }
 
+const logoFilter = (opaqueBg?: boolean) =>
+  opaqueBg ? "grayscale brightness-125 contrast-75" : "grayscale brightness-0 invert opacity-90";
+
 const BrandCard = ({ brand }: { brand: Brand }) => (
-  <div className="w-72 shrink-0 flex flex-col rounded-2xl overflow-hidden bg-gradient-to-br from-[#033257] to-dark-blue ring-1 ring-white/10 shadow-xl shadow-dark-blue/25 transition duration-300 hover:-translate-y-1 hover:ring-white/25 hover:shadow-2xl hover:shadow-dark-blue/40">
+  <div className="w-80 shrink-0 flex flex-col rounded-2xl overflow-hidden bg-gradient-to-br from-[#033257] to-dark-blue ring-1 ring-white/10 shadow-xl shadow-dark-blue/25 transition duration-300 hover:-translate-y-1 hover:ring-white/25 hover:shadow-2xl hover:shadow-dark-blue/40">
     <div className="flex-1 flex flex-col items-center px-6 pt-8 pb-7">
-      <div className="h-28 flex justify-center items-center">
+      <div className="h-28 w-full flex justify-center items-center">
         <Image
           src={brand.src}
           alt={brand.alt}
           width={brand.width}
           height={brand.height}
-          className="max-h-24 w-auto object-contain"
+          className={`${brand.largeLogo ? "h-full" : "max-h-24"} w-auto max-w-full object-contain ${logoFilter(brand.opaqueBg)}`}
         />
       </div>
       <p className="text-sm text-white/90 font-light font-body text-center mt-4 leading-relaxed">{brand.description}</p>
@@ -45,7 +54,7 @@ const BrandCard = ({ brand }: { brand: Brand }) => (
               alt={subBrand.alt}
               width={subBrand.width}
               height={subBrand.height}
-              className="max-h-9 w-auto object-contain"
+              className={`max-h-12 w-auto max-w-full object-contain ${logoFilter(subBrand.opaqueBg)}`}
             />
           ))}
         </div>
