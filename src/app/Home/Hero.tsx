@@ -15,17 +15,8 @@ const handleHeroClick = () => {
 
 const Hero = () => {
   return (
-    <>
     <section className="relative z-10 flex flex-col bg-transparent items-center justify-center">
       <div className="flex flex-col text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 md:my-52 my-24">
-
-        <div className="flex items-center justify-center gap-4 mb-8 fade-in-init">
-          <span className="hidden sm:block h-px w-10 bg-white/40" />
-          <p className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/80 font-semibold font-body">
-            Asesoramiento Financiero Estratégico
-          </p>
-          <span className="hidden sm:block h-px w-10 bg-white/40" />
-        </div>
 
         <h1 className="text-white text-2xl md:text-5xl font-bold md:leading-[3.8rem] mb-10 font-h1 fade-up-init">
           Impulsamos tu Crecimiento Empresarial con Soluciones Financieras Estratégicas
@@ -43,19 +34,7 @@ const Hero = () => {
           </svg>
         </button>
       </div>
-      </section>
-
-      <button
-        onClick={() => scrollToSection('about-us')}
-        aria-label="Ir a Sobre Nosotros"
-        className="hidden md:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/60 hover:text-white duration-300"
-      >
-        <span className="text-[10px] uppercase tracking-[0.2em] font-body">Descubrí más</span>
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </button>
-    </>
+    </section>
   );
 }
 
