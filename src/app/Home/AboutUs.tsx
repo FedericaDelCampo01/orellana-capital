@@ -50,19 +50,11 @@ const AboutUs = () => {
             <p className="text-white/75 text-sm font-light font-body mt-1">
               M&A, finanzas corporativas y banca de inversión
             </p>
-            <div className="mt-5 pt-5 border-t border-white/20 flex gap-10">
-              <div>
-                <p className="text-2xl font-bold text-white font-h2">+15</p>
-                <p className="text-[11px] uppercase tracking-[0.15em] text-white/60 font-body mt-1">
-                  Años de experiencia
-                </p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-white font-h2">3</p>
-                <p className="text-[11px] uppercase tracking-[0.15em] text-white/60 font-body mt-1">
-                  Continentes con operaciones
-                </p>
-              </div>
+            <div className="mt-5 pt-5 border-t border-white/20">
+              <p className="text-2xl font-bold text-white font-h2">+15</p>
+              <p className="text-[11px] uppercase tracking-[0.15em] text-white/60 font-body mt-1">
+                Años de experiencia
+              </p>
             </div>
           </div>
         </div>
