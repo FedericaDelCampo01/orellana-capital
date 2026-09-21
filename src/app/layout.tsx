@@ -7,6 +7,7 @@ import favicon from '../../public/favicon.ico';
 import localFont from "next/font/local";
 import Script from "next/script";
 import GoogleAnalytics from "./Utility/GoogleAnalytics";
+import { Analytics } from "@vercel/analytics/next";
 
 export const runtime = 'edge';
 
@@ -113,7 +114,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <body >{children}</body>
+      <body >
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
