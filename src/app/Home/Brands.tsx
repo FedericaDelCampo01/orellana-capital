@@ -6,28 +6,28 @@ const brands = [
     width: 230,
     height: 58,
     alt: "Eduvaler",
-    description: "Software de educación y gestión emocional."
+    name: "Eduvaluer"
   },
   {
     src: "/images/clients/verdeagua.webp",
     width: 224,
     height: 39,
     alt: "Verdeagua",
-    description: "Producción hidropónica de vegetales."
+    name: "Verdeagua"
   },
   {
     src: "/images/clients/trivium.webp",
     width: 149,
     height: 71,
     alt: "Trivium",
-    description: "Software administrativo y de gestión académica para la educación."
+    name: "Trivium"
   },
   {
     src: "/images/clients/grifelma.webp",
     width: 122,
     height: 122,
     alt: "Grifelma",
-    description: "Imprenta industrial y digital.",
+    name: "Grifelma",
     opaqueBg: true
   },
   {
@@ -35,14 +35,14 @@ const brands = [
     width: 150,
     height: 32,
     alt: "Genersol",
-    description: "Productos y servicios para los sectores de energía, industria y defensa."
+    name: "Genersol"
   },
   {
     src: "/images/clients/edintor.png",
     width: 240,
     height: 83,
     alt: "Edintor SA",
-    description: "Importación y venta de las líneas de herramientas INGCO y WADFOW.",
+    name: "Edintor S.A.",
     largeLogo: true,
     subBrands: [
       { src: "/images/clients/ingco.png", width: 1600, height: 1600, alt: "Ingco", opaqueBg: true },
@@ -55,35 +55,35 @@ const brands = [
     width: 200,
     height: 200,
     alt: "Borriero Impresores",
-    description: "Soluciones gráficas de alta calidad."
+    name: "Borriero Impresores"
   },
   {
     src: "/images/clients/epsa.png",
     width: 200,
     height: 72,
     alt: "EPSA",
-    description: "Fabricación y exportación de dispositivos médicos descartables para anestesia, cirugía y cuidados intensivos."
+    name: "EPSA"
   },
   {
     src: "/images/clients/transporte-varela.png",
     width: 150,
     height: 91,
     alt: "Transporte José Pedro Varela",
-    description: "Transporte terrestre de cargas, con más de 35 años de trayectoria en el sector."
+    name: "Transporte José Pedro Varela"
   },
   {
     src: "/images/clients/gruas-man.png",
     width: 190,
     height: 84,
     alt: "Grúas Man",
-    description: "Servicios de izaje y alquiler de grúas para obra e industria."
+    name: "Grúas Man"
   },
   {
     src: "/images/clients/schaaf.png",
     width: 240,
     height: 76,
     alt: "Gunter Schaaf",
-    description: "Importación y distribución de insumos médicos. Soluciones seguras y confiables, con más de 60 años de trayectoria."
+    name: "Gunter Schaaf"
   }
 ];
 

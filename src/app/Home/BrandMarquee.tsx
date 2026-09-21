@@ -16,7 +16,7 @@ interface Brand {
   width: number;
   height: number;
   alt: string;
-  description: string;
+  name: string;
   /** El archivo tiene fondo sólido: no lo pasamos a blanco porque quedaría un bloque */
   opaqueBg?: boolean;
   /** Escala el logo hasta llenar la caja en vez de dejarlo en su tamaño natural */
@@ -44,9 +44,9 @@ const BrandCard = ({ brand }: { brand: Brand }) => (
           className={`${brand.largeLogo ? "h-full" : "max-h-24"} w-auto max-w-full object-contain ${logoFilter(brand.opaqueBg)}`}
         />
       </div>
-      <p className="text-sm text-white/90 font-light font-body text-center mt-4 leading-relaxed">{brand.description}</p>
+      <p className="text-sm text-white font-semibold font-body text-center mt-5 leading-snug">{brand.name}</p>
       {brand.subBrands && (
-        <div className="mt-6 pt-5 border-t border-white/15 w-full flex flex-wrap justify-center items-center gap-3">
+        <div className="mt-5 pt-5 border-t border-white/15 w-full flex flex-wrap justify-center items-center gap-3">
           {brand.subBrands.map((subBrand, index) => (
             <Image
               key={index}
