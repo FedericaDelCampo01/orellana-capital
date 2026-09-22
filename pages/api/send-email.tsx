@@ -1,37 +1,45 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import * as postmark from 'postmark';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY as string);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Initialize the Postmark client with your server token
-  const client = new postmark.ServerClient(process.env.REACT_APP_POSTMARK_API_TOKEN as string);
-  const senderEmail = process.env.REACT_APP_SENDER_EMAIL as string;
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-  if (req.method === 'POST') {
-    try {
-      const { name, email, phone, type, message } = req.body;
-      const subject = `Nueva consulta en la web por parte de: ${name}`;
+  try {
+    const { name, email, phone, message } = req.body;
 
-      // Send email
-      const emailResponse = await client.sendEmail({
-        From: senderEmail,
-        To: senderEmail,
-        Subject: subject,
-        HtmlBody: `
-          <h2>Nuevo mensaje desde la web</h2>
-          <p><strong>Nombre:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Telefono:</strong> ${phone || 'Not provided'}</p>
-          <h3><Mensaje:</h3>
-          <p>${message}</p>
-        `,
-      });
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: 'Faltan campos obligatorios' });
+    }
 
-      console.log('Email enviado:', emailResponse); // Log the response from Postmark
-      return res.status(200).json({ message: 'Email enviado con éxito', emailResponse });
-    } catch (error: any) {
+    const subject = `Nueva consulta en la web por parte de: ${name}`;
+
+    const { data, error } = await resend.emails.send({
+      from: 'Web Orellana Capital <contacto@orellanacapitaladvisors.com>',
+      to: ['alejandro@orellanacapitaladvisors.com'],
+      replyTo: email,
+      subject,
+      html: `
+        <h2>Nuevo mensaje desde la web</h2>
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Teléfono:</strong> ${phone || 'No provisto'}</p>
+        <h3>Mensaje:</h3>
+        <p>${message}</p>
+      `,
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
       return res.status(500).json({ error: 'Error al enviar email', details: error.message });
     }
-  } else {
-    return res.status(405).json({ error: 'Method not allowed..' });
+
+    return res.status(200).json({ message: 'Email enviado con éxito', data });
+  } catch (error: any) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Error al enviar email', details: error.message });
   }
 }
