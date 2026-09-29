@@ -12,6 +12,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
+    country: '',
     message: ''
   });
 
@@ -69,7 +70,7 @@ const Contact = () => {
       await response.json();
 
       setSuccessMessage('¡Mensaje enviado! Te vamos a responder a la brevedad.');
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', country: '', message: '' });
       setErrors({});
     } catch (error) {
       console.error('Error:', error);
@@ -84,7 +85,7 @@ const Contact = () => {
       <div className="container max-w-6xl mx-auto md:py-16 flex flex-col md:flex-row items-center md:items-start relative my-10 md:my-20 md:space-x-20 px-4">
 
         <div className="w-full md:w-1/2 flex flex-col px-4 md:px-0">
-          <h2 className="text-blue font-bold font-h2 mb-2 fade-up-init">Orellana Capital</h2>
+          <h2 className="text-blue font-bold font-h2 mb-2 fade-up-init">Orellana Capital Advisors</h2>
           <h3 className="text-dark-blue text-xl md:text-3xl font-bold font-h3 fade-up-init">Contacto</h3>
 
           <div className="h-[3px] w-12 bg-blue rounded-full my-6" />
@@ -175,6 +176,22 @@ const Contact = () => {
                 placeholder="+598 ..."
                 name="phone"
                 value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="mb-5">
+              <label htmlFor="country" className={labelClass}>
+                País <span className="normal-case tracking-normal text-dark-blue/40 font-light">(opcional)</span>
+              </label>
+              <input
+                id="country"
+                className={`${inputBaseClass} border border-dark-blue/10`}
+                type="text"
+                placeholder="Desde dónde nos escribís"
+                name="country"
+                autoComplete="country-name"
+                value={formData.country}
                 onChange={handleChange}
               />
             </div>

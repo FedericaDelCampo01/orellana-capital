@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.orellanacapitaladvisors.com"),
   title: "Orellana Capital Advisors",
   description: "Asesoramiento Financiero Estratégico",
-  keywords: "asesoramiento,finanzas, estrategia, consultoria",
+  keywords: "asesoramiento,finanzas, estrategia, consultoría",
   openGraph: {
     title: "Orellana Capital Advisors | Asesoramiento Financiero Estratégico",
     description: "Impulsamos tu Crecimiento Empresarial con Soluciones Financieras Estratégicas",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
         url: "https://www.orellanacapitaladvisors.com/images/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Orellana Capital Advisor - Asesoramiento Financiero Estratégico",
+        alt: "Orellana Capital Advisors - Asesoramiento Financiero Estratégico",
       },
     ],
     locale: "es_ES",

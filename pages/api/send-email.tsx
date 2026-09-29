@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const { name, email, phone, message } = req.body;
+    const { name, email, phone, country, message } = req.body;
 
     if (!name || !email || !message) {
       return res.status(400).json({ error: 'Faltan campos obligatorios' });
@@ -27,6 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         <p><strong>Nombre:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Teléfono:</strong> ${phone || 'No provisto'}</p>
+        <p><strong>País:</strong> ${country || 'No provisto'}</p>
         <h3>Mensaje:</h3>
         <p>${message}</p>
       `,

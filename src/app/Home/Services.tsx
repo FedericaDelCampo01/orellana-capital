@@ -5,8 +5,8 @@ const Services = () => {
   const services = [
     {
       title: 'Finanzas Corporativas y Estrategia',
-      description: "Asesoramos a empresas en el financiamiento de sus negocios existentes y/o nuevos proyectos, diseñando estrategias financieras que maximizan el valor y optimizan la estrucutra de capital.",
-      services: ['Valoración de empresas y modelos financieros.', ' Financiamiento y relacionamiento con instituciones financieras / bancarias.', ' Analisis de solvencia financiera, flujos de caja y desarrollo de nuevos negocios.']
+      description: "Asesoramos a empresas en el financiamiento de sus negocios existentes y/o nuevos proyectos, diseñando estrategias financieras que maximizan el valor y optimizan la estructura de capital.",
+      services: ['Valoración de empresas y modelos financieros.', ' Financiamiento y relacionamiento con instituciones financieras / bancarias.', ' Análisis de solvencia financiera, flujos de caja y desarrollo de nuevos negocios.']
     },
     {
       title: 'Levantamiento de Capital',
@@ -16,7 +16,7 @@ const Services = () => {
     {
       title: 'Venture Capital',
       description: "Ayudamos a startups y empresas en expansión a preparar sus modelos financieros, desarrollar métricas y a optimizar sus estrategias para atraer inversión de Capital de Riesgo.",
-      services: ['Desarrollo de modelos financieros para startups.', 'Medición de métricas clave (KPI’s).', 'Contacto y captacion de fondos con VC’s.']
+      services: ['Desarrollo de modelos financieros para startups.', 'Medición de métricas clave (KPI’s).', 'Contacto y captación de fondos con VC’s.']
     },
     {
       title: 'Mergers and Acquisitions',

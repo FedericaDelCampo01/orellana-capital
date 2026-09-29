@@ -5,7 +5,7 @@ const brands = [
     src: "/images/clients/eduvaluer.webp",
     width: 230,
     height: 58,
-    alt: "Eduvaler",
+    alt: "Eduvaluer",
     name: "Eduvaluer"
   },
   {
@@ -23,19 +23,19 @@ const brands = [
     name: "Trivium"
   },
   {
-    src: "/images/clients/grifelma.webp",
+    src: "/images/clients/grifelman.webp",
     width: 122,
     height: 122,
-    alt: "Grifelma",
-    name: "Grifelma",
+    alt: "Grifelman",
+    name: "Grifelman",
     opaqueBg: true
   },
   {
-    src: "/images/clients/genersol.webp",
-    width: 150,
-    height: 32,
-    alt: "Genersol",
-    name: "Genersol"
+    src: "/images/clients/genersol.png",
+    width: 200,
+    height: 80,
+    alt: "Genersol Industry & Energy",
+    name: "Genersol Industry & Energy"
   },
   {
     src: "/images/clients/edintor.png",
@@ -72,11 +72,11 @@ const brands = [
     name: "Transporte José Pedro Varela"
   },
   {
-    src: "/images/clients/gruas-man.png",
+    src: "/images/clients/gruas-mar.png",
     width: 190,
     height: 84,
-    alt: "Grúas Man",
-    name: "Grúas Man"
+    alt: "Grúas Mar",
+    name: "Grúas Mar"
   },
   {
     src: "/images/clients/schaaf.png",
