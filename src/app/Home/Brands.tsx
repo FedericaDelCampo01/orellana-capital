@@ -35,7 +35,8 @@ const brands = [
     width: 200,
     height: 80,
     alt: "Genersol Industry & Energy",
-    name: "Genersol Industry & Energy"
+    name: "Genersol Industry & Energy",
+    mediumLogo: true
   },
   {
     src: "/images/clients/edintor.png",

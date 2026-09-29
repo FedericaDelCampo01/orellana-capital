@@ -21,6 +21,8 @@ interface Brand {
   opaqueBg?: boolean;
   /** Escala el logo hasta llenar la caja en vez de dejarlo en su tamaño natural */
   largeLogo?: boolean;
+  /** Agranda el logo un poco, sin llegar a llenar la caja */
+  mediumLogo?: boolean;
   subBrands?: SubBrand[];
 }
 
@@ -41,7 +43,7 @@ const BrandCard = ({ brand }: { brand: Brand }) => (
           alt={brand.alt}
           width={brand.width}
           height={brand.height}
-          className={`${brand.largeLogo ? "h-full" : "max-h-24"} w-auto max-w-full object-contain ${logoFilter(brand.opaqueBg)}`}
+          className={`${brand.largeLogo ? "h-full" : brand.mediumLogo ? "h-24" : "max-h-24"} w-auto max-w-full object-contain ${logoFilter(brand.opaqueBg)}`}
         />
       </div>
       <p className="text-sm text-white font-semibold font-body text-center mt-5 leading-snug">{brand.name}</p>
