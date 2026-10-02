@@ -3,11 +3,15 @@
 import { FormEvent, useState } from 'react';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 import Image from 'next/image';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const inputBaseClass = "appearance-none block w-full bg-light-blue/40 text-dark-blue rounded-lg py-3.5 px-5 leading-tight font-body transition duration-200 focus:outline-none focus:bg-white focus:border-blue focus:ring-2 focus:ring-blue/20";
+type ErrorKey = 'nameRequired' | 'emailRequired' | 'messageRequired';
+
 const labelClass = "block text-xs uppercase tracking-[0.15em] text-blue font-semibold font-body mb-2";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,9 +20,10 @@ const Contact = () => {
     message: ''
   });
 
-  const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [successMessage, setSuccessMessage] = useState('');
-  const [submitError, setSubmitError] = useState('');
+  // Store translation keys, not text, so messages follow a language switch
+  const [errors, setErrors] = useState<{ [key: string]: ErrorKey }>({});
+  const [isSent, setIsSent] = useState(false);
+  const [hasSubmitError, setHasSubmitError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -35,12 +40,12 @@ const Contact = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitError('');
+    setHasSubmitError(false);
 
-    const newErrors: { [key: string]: string } = {};
-    if (!formData.name) newErrors.name = 'Ingresá tu nombre';
-    if (!formData.email) newErrors.email = 'Ingresá tu email';
-    if (!formData.message) newErrors.message = 'Escribí tu mensaje';
+    const newErrors: { [key: string]: ErrorKey } = {};
+    if (!formData.name) newErrors.name = 'nameRequired';
+    if (!formData.email) newErrors.email = 'emailRequired';
+    if (!formData.message) newErrors.message = 'messageRequired';
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -69,12 +74,12 @@ const Contact = () => {
 
       await response.json();
 
-      setSuccessMessage('¡Mensaje enviado! Te vamos a responder a la brevedad.');
+      setIsSent(true);
       setFormData({ name: '', email: '', phone: '', country: '', message: '' });
       setErrors({});
     } catch (error) {
       console.error('Error:', error);
-      setSubmitError('No pudimos enviar tu mensaje. Probá de nuevo o escribínos directamente por email.');
+      setHasSubmitError(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -86,12 +91,12 @@ const Contact = () => {
 
         <div className="w-full md:w-1/2 flex flex-col px-4 md:px-0">
           <h2 className="text-blue font-bold font-h2 mb-2 fade-up-init">Orellana Capital Advisors</h2>
-          <h3 className="text-dark-blue text-xl md:text-3xl font-bold font-h3 fade-up-init">Contacto</h3>
+          <h3 className="text-dark-blue text-xl md:text-3xl font-bold font-h3 fade-up-init">{t.contact.title}</h3>
 
           <div className="h-[3px] w-12 bg-blue rounded-full my-6" />
 
           <p className="text-dark-blue font-light font-body leading-relaxed fade-up-init">
-            Nos encantaría ayudarte a alcanzar tus objetivos financieros. Escribínos para solicitar una consulta personalizada.
+            {t.contact.text}
           </p>
 
           <div className="mt-10 space-y-4">
@@ -138,17 +143,17 @@ const Contact = () => {
             noValidate
           >
             <div className="mb-5">
-              <label htmlFor="name" className={labelClass}>Nombre y apellido</label>
+              <label htmlFor="name" className={labelClass}>{t.contact.nameLabel}</label>
               <input
                 id="name"
                 className={`${inputBaseClass} border ${errors.name ? 'border-red-400' : 'border-dark-blue/10'}`}
                 type="text"
-                placeholder="Tu nombre"
+                placeholder={t.contact.namePlaceholder}
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
               />
-              {errors.name && <p className="text-red-500 text-xs mt-2">{errors.name}</p>}
+              {errors.name && <p className="text-red-500 text-xs mt-2">{t.contact[errors.name]}</p>}
             </div>
 
             <div className="mb-5">
@@ -157,17 +162,17 @@ const Contact = () => {
                 id="email"
                 className={`${inputBaseClass} border ${errors.email ? 'border-red-400' : 'border-dark-blue/10'}`}
                 type="email"
-                placeholder="tu@email.com"
+                placeholder={t.contact.emailPlaceholder}
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
               />
-              {errors.email && <p className="text-red-500 text-xs mt-2">{errors.email}</p>}
+              {errors.email && <p className="text-red-500 text-xs mt-2">{t.contact[errors.email]}</p>}
             </div>
 
             <div className="mb-5">
               <label htmlFor="phone" className={labelClass}>
-                Teléfono <span className="normal-case tracking-normal text-dark-blue/40 font-light">(opcional)</span>
+                {t.contact.phoneLabel} <span className="normal-case tracking-normal text-dark-blue/40 font-light">{t.contact.optional}</span>
               </label>
               <input
                 id="phone"
@@ -182,13 +187,13 @@ const Contact = () => {
 
             <div className="mb-5">
               <label htmlFor="country" className={labelClass}>
-                País <span className="normal-case tracking-normal text-dark-blue/40 font-light">(opcional)</span>
+                {t.contact.countryLabel} <span className="normal-case tracking-normal text-dark-blue/40 font-light">{t.contact.optional}</span>
               </label>
               <input
                 id="country"
                 className={`${inputBaseClass} border border-dark-blue/10`}
                 type="text"
-                placeholder="Desde dónde nos escribís"
+                placeholder={t.contact.countryPlaceholder}
                 name="country"
                 autoComplete="country-name"
                 value={formData.country}
@@ -197,27 +202,27 @@ const Contact = () => {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="message" className={labelClass}>Mensaje</label>
+              <label htmlFor="message" className={labelClass}>{t.contact.messageLabel}</label>
               <textarea
                 id="message"
                 className={`${inputBaseClass} border ${errors.message ? 'border-red-400' : 'border-dark-blue/10'} h-36 resize-none no-resize`}
-                placeholder="Contanos brevemente en qué podemos ayudarte"
+                placeholder={t.contact.messagePlaceholder}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
               />
-              {errors.message && <p className="text-red-500 text-xs mt-2">{errors.message}</p>}
+              {errors.message && <p className="text-red-500 text-xs mt-2">{t.contact[errors.message]}</p>}
             </div>
 
-            {successMessage && (
+            {isSent && (
               <div className="bg-green-50 border border-green-200 text-green-800 text-sm p-4 rounded-lg text-center mb-4">
-                {successMessage}
+                {t.contact.success}
               </div>
             )}
 
-            {submitError && (
+            {hasSubmitError && (
               <div className="bg-red-50 border border-red-200 text-red-700 text-sm p-4 rounded-lg text-center mb-4">
-                {submitError}
+                {t.contact.error}
               </div>
             )}
 
@@ -226,7 +231,7 @@ const Contact = () => {
               type="submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Enviando...' : 'Enviar'}
+              {isSubmitting ? t.contact.submitting : t.contact.submit}
               {!isSubmitting && (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />

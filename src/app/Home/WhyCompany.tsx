@@ -1,14 +1,11 @@
 import OptimizedImage from "../Utility/OptimizedImage";
 import companyPic from "../../../public/images/company.webp"
+import { useLanguage } from '../i18n/LanguageContext';
 
 const WhyCompany = () => {
 
-  const reasons: string[] = [
-    "Adaptabilidad a entornos dinámicos.",
-    "Amplia experiencia internacional.",
-    "Red de contactos estratégicos.",
-    "Foco en resultados medibles."
-  ]
+  const { t } = useLanguage();
+  const reasons = t.whyCompany.reasons;
 
   return (
     <section id='why-company' className="bg-white overflow-hidden">
@@ -16,16 +13,16 @@ const WhyCompany = () => {
         <div className="px-4 md:px-0 md:w-1/2">
           <div>
             <h2 className="text-blue font-bold font-h2 mb-2 fade-up-init">Orellana Capital</h2>
-            <h3 className="text-xl md:text-3xl font-bold text-dark-blue md:leading-[48px] font-h3 fade-up-init">Por Qué Elegirnos</h3>
+            <h3 className="text-xl md:text-3xl font-bold text-dark-blue md:leading-[48px] font-h3 fade-up-init">{t.whyCompany.title}</h3>
 
             <div className="h-[3px] w-12 bg-blue rounded-full my-6" />
 
             <p className="text-dark-blue font-light leading-[29px] text-base mb-8 font-body fade-up-init">
-              Nuestra experiencia, red de contactos y enfoque orientado a resultados nos permiten ofrecer un servicio de alto valor para nuestros clientes. Adaptamos nuestras soluciones a las necesidades específicas de cada empresa, asegurando un crecimiento sostenible y rentable.
+              {t.whyCompany.text}
             </p>
 
             <p className="text-xs uppercase tracking-[0.15em] text-blue font-semibold font-body mt-10 mb-5 fade-up-init">
-              Puntos diferenciadores
+              {t.whyCompany.differentiators}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

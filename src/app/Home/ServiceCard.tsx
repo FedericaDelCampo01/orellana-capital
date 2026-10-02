@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface ServiceCardProps {
   title: string;
@@ -8,6 +9,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, services, index }) => {
+  const { t } = useLanguage();
   return (
     <div className="group relative flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg shadow-dark-blue/20 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-dark-blue/30">
       <span
@@ -29,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, services,
         </p>
 
         <p className="text-xs uppercase tracking-[0.15em] text-blue font-semibold font-body mt-8 mb-4">
-          Servicios incluidos
+          {t.services.included}
         </p>
 
         <ul className="space-y-3">

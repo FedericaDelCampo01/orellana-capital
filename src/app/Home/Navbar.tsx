@@ -6,14 +6,18 @@ import Image from 'next/image';
 import logoImage from '../../../public/images/logo.png';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 import { scrollToSection } from '../Utility/ScrollHelpers';
+import { useLanguage } from '../i18n/LanguageContext';
+import LanguageSwitcher from '../i18n/LanguageSwitcher';
 
-const links = [
-  { id: 'about-us', label: 'Sobre Nosotros' },
-  { id: 'services', label: 'Servicios' },
-  { id: 'why-company', label: 'Por qué Orellana Capital' }
-];
+const sectionIds = ['about-us', 'services', 'why-company'] as const;
 
 const Navbar = () => {
+  const { t } = useLanguage();
+  const links = [
+    { id: sectionIds[0], label: t.nav.aboutUs },
+    { id: sectionIds[1], label: t.nav.services },
+    { id: sectionIds[2], label: t.nav.whyCompany }
+  ];
   const [isClicked, setIsClicked] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState('');
@@ -32,7 +36,7 @@ const Navbar = () => {
 
   // Highlight the link of the section currently crossing the middle of the viewport
   React.useEffect(() => {
-    const ids = [...links.map((link) => link.id), 'contact'];
+    const ids = [...sectionIds, 'contact'];
     const visible = new Set<string>();
 
     // True while the hero still covers the middle of the viewport
@@ -131,51 +135,55 @@ const Navbar = () => {
               className="group inline-flex items-center gap-2 text-base px-7 py-2.5 bg-white text-dark-blue rounded-md font-semibold hover:bg-blue hover:text-white duration-300 shadow-md shadow-dark-blue/20 hover:shadow-lg hover:-translate-y-0.5"
               onClick={handleLetsTalkClick}
             >
-              Contacto
+              {t.nav.contact}
               <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6l6 6-6 6" />
               </svg>
             </button>
+            <LanguageSwitcher />
           </div>
 
 
           {/* Mobile Menu */}
-          <div className="md:hidden relative">
-            <button
-              className="text-white hover:text-light-blue duration-300"
-              onClick={toggleNavbar}
-              aria-label="Toggle Navigation"
-              aria-expanded={isClicked}
-            >
-              {isClicked ? (
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              ) : (
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-              )}
-            </button>
-            {/* Dropdown Menu */}
-            <div
-              className={`absolute text-center right-[-16px] mt-6 w-screen bg-dark-blue/95 backdrop-blur-md text-white shadow-lg duration-300 ease-in-out ${
-                isClicked ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-8 opacity-0 pointer-events-none'
-              }`}
-              style={{ zIndex: 9999 }}
-            >
-              <div className="px-2 py-4 divide-y divide-white/10">
-                {[...links, { id: 'contact', label: 'Contacto' }].map((link) => (
-                  <button
-                    key={link.id}
-                    onClick={() => handleLinkClick(link.id)}
-                    className={`block w-full duration-300 py-5 ${
-                      activeSection === link.id ? 'text-white font-semibold' : 'text-white/80 hover:text-white'
-                    }`}
-                  >
-                    {link.label}
-                  </button>
-                ))}
+          <div className="md:hidden flex items-center gap-5">
+            <LanguageSwitcher />
+            <div className="relative">
+              <button
+                className="text-white hover:text-light-blue duration-300"
+                onClick={toggleNavbar}
+                aria-label={t.nav.toggleNavigation}
+                aria-expanded={isClicked}
+              >
+                {isClicked ? (
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                ) : (
+                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+                )}
+              </button>
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute text-center right-[-16px] mt-6 w-screen bg-dark-blue/95 backdrop-blur-md text-white shadow-lg duration-300 ease-in-out ${
+                  isClicked ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-8 opacity-0 pointer-events-none'
+                }`}
+                style={{ zIndex: 9999 }}
+              >
+                <div className="px-2 py-4 divide-y divide-white/10">
+                  {[...links, { id: 'contact', label: t.nav.contact }].map((link) => (
+                    <button
+                      key={link.id}
+                      onClick={() => handleLinkClick(link.id)}
+                      className={`block w-full duration-300 py-5 ${
+                        activeSection === link.id ? 'text-white font-semibold' : 'text-white/80 hover:text-white'
+                      }`}
+                    >
+                      {link.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@
 import React from 'react';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 import { scrollToSection } from '../Utility/ScrollHelpers';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const handleHeroClick = () => {
   trackEvent('button_click', {
@@ -14,21 +15,22 @@ const handleHeroClick = () => {
 };
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative z-10 flex flex-col bg-transparent items-center justify-center">
       <div className="flex flex-col text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 md:my-52 my-24">
 
         <h1 className="text-white text-2xl md:text-5xl font-bold md:leading-[3.8rem] mb-10 font-h1 fade-up-init">
-          M&A, Finanzas Corporativas y Banca de Inversión
+          {t.hero.title}
         </h1>
         <p className="text-white text-base md:text-lg max-w-2xl font-light text-center self-center mb-12 font-body fade-up-init">
-          Más de 15 años de experiencia impulsando tu crecimiento empresarial con Soluciones Financieras Estratégicas
+          {t.hero.subtitle}
         </p>
         <button
           onClick={handleHeroClick}
           className="group self-center inline-flex items-center gap-3 font-body px-8 py-3 w-fit bg-white hover:bg-blue text-dark-blue duration-300 hover:text-white rounded-lg font-semibold text-base shadow-lg shadow-dark-blue/30 hover:shadow-xl hover:-translate-y-0.5 fade-up-init"
         >
-          Descubre cómo podemos ayudarte
+          {t.hero.cta}
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

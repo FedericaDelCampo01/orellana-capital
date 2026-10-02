@@ -1,4 +1,5 @@
 import BrandMarquee from "./BrandMarquee";
+import { useLanguage } from '../i18n/LanguageContext';
 
 const brands = [
   {
@@ -89,9 +90,10 @@ const brands = [
 ];
 
 const Brands = () => {
+  const { t } = useLanguage();
   return (
     <>
-      <BrandMarquee brands={brands} title="Algunos de nuestros Clientes"/>
+      <BrandMarquee brands={brands} title={t.brands.title}/>
     </>
   );
 };
