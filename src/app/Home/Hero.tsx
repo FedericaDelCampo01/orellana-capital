@@ -19,10 +19,10 @@ const Hero = () => {
       <div className="flex flex-col text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 md:my-52 my-24">
 
         <h1 className="text-white text-2xl md:text-5xl font-bold md:leading-[3.8rem] mb-10 font-h1 fade-up-init">
-          Impulsamos tu Crecimiento Empresarial con Soluciones Financieras Estratégicas
+          M&A, Finanzas Corporativas y Banca de Inversión
         </h1>
-        <p className="text-white text-base md:text-lg max-w-xl font-light text-center self-center mb-12 font-body fade-up-init">
-          Más de 15 años de experiencia en M&A, finanzas corporativas, banca de inversión y consultoría empresarial.
+        <p className="text-white text-base md:text-lg max-w-2xl font-light text-center self-center mb-12 font-body fade-up-init">
+          Más de 15 años de experiencia impulsando tu crecimiento empresarial con Soluciones Financieras Estratégicas
         </p>
         <button
           onClick={handleHeroClick}
