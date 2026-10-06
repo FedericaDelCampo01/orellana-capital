@@ -6,16 +6,12 @@ import { Language } from './translations';
 import { trackEvent } from '../Utility/AnalyticsHelpers';
 
 // Flags are inline SVG because emoji flags don't render on Windows
-const UruguayFlag = ({ clipId }: { clipId: string }) => (
+const SpainFlag = ({ clipId }: { clipId: string }) => (
   <svg viewBox="0 0 18 18" className="h-full w-full" aria-hidden="true">
     <clipPath id={clipId}><circle cx="9" cy="9" r="9" /></clipPath>
     <g clipPath={`url(#${clipId})`}>
-      <rect width="18" height="18" fill="#fff" />
-      {[2, 6, 10, 14].map((y) => (
-        <rect key={y} y={y} width="18" height="2" fill="#0038A8" />
-      ))}
-      <rect width="8" height="8" fill="#fff" />
-      <circle cx="4" cy="4" r="2.4" fill="#FCD116" stroke="#7B3F00" strokeWidth="0.3" />
+      <rect width="18" height="18" fill="#AA151B" />
+      <rect y="4.5" width="18" height="9" fill="#F1BF00" />
     </g>
   </svg>
 );
@@ -34,7 +30,7 @@ const UKFlag = ({ clipId }: { clipId: string }) => (
 );
 
 const options: { code: Language; label: string; Flag: typeof UKFlag }[] = [
-  { code: 'es', label: 'Español', Flag: UruguayFlag },
+  { code: 'es', label: 'Español', Flag: SpainFlag },
   { code: 'en', label: 'English', Flag: UKFlag },
 ];
 
